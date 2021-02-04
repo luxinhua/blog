@@ -45,7 +45,7 @@ jobs:
       uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.DEPLOY_TOKEN }}
-        branch: ${{ github.ref }}
+        branch: main
         directory: ./public
         repository: https://${{ secrets.DEPLOY_TOKEN }}@github.com/luxinhua/luxinhua.github.io.git
 
