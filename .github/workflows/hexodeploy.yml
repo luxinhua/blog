@@ -41,10 +41,10 @@ jobs:
       with:
         GITHUB_EMAIL: "2846154596@qq.com"
         GITHUB_USERNAME: "xhlu"
-        PUBLISH_REPO: https://${{ secrets.HEXO_VERITY }}@github.com/luxinhua/luxinhua.github.io.git
+        PUBLISH_REPO: https://${{ secrets.DEPLOY_TOKEN }}@github.com/luxinhua/luxinhua.github.io.git
         PUBLISH_BRANCH: master
         PUBLISH_DIR: ./public
-        DEPLOY_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+        DEPLOY_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
 
     # - name: Deploy
     #   uses: peaceiris/actions-gh-pages@v2
