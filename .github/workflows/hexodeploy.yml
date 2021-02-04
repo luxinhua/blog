@@ -36,6 +36,10 @@ jobs:
         hexo clean
         hexo g
 
+    - name:  hexo d
+      run: | 
+        hexo d
+
     - name: Commit files
       run: |
         git config --local user.email "2846154596@qq.com"
