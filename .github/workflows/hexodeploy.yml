@@ -36,13 +36,25 @@ jobs:
         hexo clean
         hexo g
 
+    # - name: Commit files
+    #   run: |
+    #     git config --local user.email "2846154596@qq.com"
+    #     git config --local user.name "xhlu"
+    #     git commit -m "Add changes" -a
+    # - name: Push changes
+    #   uses: ad-m/github-push-action@master
+    #   with:
+    #     github_token: ${{ secrets.DEPLOY_TOKEN }}
+    #     branch: ${{ github.ref }}
+    #     directory: ./public
+
     - name: Push md file to Github resp_md_file branch...
       uses: x-actions/gh-pages@release/v1
       with:
         GITHUB_EMAIL: "2846154596@qq.com"
         GITHUB_USERNAME: "xhlu"
         PUBLISH_REPO: https://${{ secrets.DEPLOY_TOKEN }}@github.com/luxinhua/luxinhua.github.io.git
-        PUBLISH_BRANCH: master
+        PUBLISH_BRANCH: ${{ github.ref }}
         PUBLISH_DIR: ./public
         DEPLOY_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
 
