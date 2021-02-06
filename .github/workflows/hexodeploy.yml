@@ -47,7 +47,7 @@ jobs:
           rm -rf * 
           cp -rf ../public/* .
           git add .
-          git commit -m "now('YYYY-MM-DD HH:mm:ss')"
+          git commit -m "update article"
           git push origin master
 
 # name: GitHub Actions Build and Deploy
