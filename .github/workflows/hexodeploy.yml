@@ -42,7 +42,8 @@ jobs:
           cp -rf ../public/* .
           git add .
           git commit -m "update article"
-          git push -u origin master 
+          git push 
+# origin master 
 
 
 # name: GitHub Actions Build and Deploy
