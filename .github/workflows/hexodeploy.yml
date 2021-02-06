@@ -1,4 +1,4 @@
-name: CI
+name: new CI
 on:
   push:
     branches:
@@ -16,7 +16,7 @@ jobs:
       - name: Use Node.js ${{ matrix.node_version }}
         uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node_version }}
+          version: ${{ matrix.node_version }}
       - name: Setup hexo
         env:
           ACTION_DEPLOY_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
@@ -32,11 +32,12 @@ jobs:
           npm install
           hexo clean
           hexo g
-          cd ../
+          rm -rf .git
+
           git clone https://github.com/luxinhua/luxinhua.github.io.git
           cd luxinhua.github.io
           rm -rf * 
-          cp -rf ../blog/public/* .
+          cp -rf ../public/* .
           git add .
           git commit -m "update article"
           git push -u origin master 
