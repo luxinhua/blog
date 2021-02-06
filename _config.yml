@@ -103,5 +103,12 @@ theme: Hacker
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
-deploy:
-  type: ''
+deploy: 
+  type: git 
+  repo: https://github.com/luxinhua/luxinhua.github.io
+  branch: main
+  # token: '' 
+  message: update article
+  name: xhlu
+  email: 2846154596@qq.com
+  extend_dirs: ./public
