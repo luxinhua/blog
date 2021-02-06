@@ -106,7 +106,7 @@ theme: Hacker
 deploy: 
   type: git 
   repo: https://github.com/luxinhua/luxinhua.github.io
-  branch: main
+  branch: master
   # token: '' 
   message: update article
   name: xhlu
