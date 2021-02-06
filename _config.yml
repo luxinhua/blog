@@ -98,12 +98,10 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: hexo-theme-pure
+theme: Hacker 
+# landscape
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: git
-  repo: https://xhlu:Qualcomm01@github.com/luxinhua/luxinhua.github.io.git      ## https://github.com/luxinhua/luxinhua.github.io
-  branch: main
-  message: udpate aritcle
+  type: ''
