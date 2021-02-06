@@ -39,6 +39,8 @@ jobs:
     - name: git remote -v ...
       run: |
         git remote -v
+        la -a 
+        tree ./public
 
     # Deploy hexo blog website.
     - name: Deploy # step4
