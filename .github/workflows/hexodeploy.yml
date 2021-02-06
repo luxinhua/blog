@@ -38,7 +38,6 @@ jobs:
           hexo clean
           hexo g
           rm -rf .git
-
           git clone https://github.com/luxinhua/luxinhua.github.io.git
           cd luxinhua.github.io
           git remote rm origin
