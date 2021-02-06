@@ -1,5 +1,5 @@
 ---
-title: Hacker 中文说明
+title: HEXO Hacker 主题中文说明
 ---
 
 
