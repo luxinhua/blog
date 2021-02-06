@@ -1,5 +1,5 @@
 ---
-title: Hacker
+title:  Hacker 英文说明
 ---
 
 # Hacker | [中文版文档](/README_zh-CN.md)
