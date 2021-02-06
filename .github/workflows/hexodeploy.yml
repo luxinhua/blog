@@ -36,13 +36,18 @@ jobs:
         hexo clean
         hexo g
 
-    - name: Build and Deploy
-      uses: renzhaosy/hexo-deploy-action@master
-      env:
-        PERSONAL_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
-        PUBLISH_REPOSITORY: luxinhua/luxinhua.github.io # The repository the action should deploy to.
-        BRANCH: master  # The branch the action should deploy to.
-        PUBLISH_DIR: ./public # The folder the action should deploy.
+    - name: git remote -v ...
+      run: |
+        git remote -v
+
+    # Deploy hexo blog website.
+    - name: Deploy # step4
+      id: deploy
+      uses: sma11black/hexo-action@v1.0.0
+      with:
+        deploy_key: ${{ secrets.SSH_PRIVATE_KEY }}
+        user_name: xhlu
+        user_email: 2846154596@qq.com
 
     # - name: Commit files
     #   run: |
