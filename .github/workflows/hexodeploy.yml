@@ -37,14 +37,14 @@ jobs:
 
           git clone https://github.com/luxinhua/luxinhua.github.io.git
           cd luxinhua.github.io
+          git remote rm origin
+          git remote set-url origin https://github.com/luxinhua/luxinhua.github.io.git 
           git remote add origin https://luxinhua:$GITHUB_TOKEN@github.com/luxinhua/luxinhua.github.io.git
           rm -rf * 
           cp -rf ../public/* .
           git add .
           git commit -m "update article"
-          git push 
-# origin master 
-
+          git push origin master
 
 # name: GitHub Actions Build and Deploy
 # on:
