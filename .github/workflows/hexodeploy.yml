@@ -20,6 +20,7 @@ jobs:
       - name: Setup hexo
         env:
           ACTION_DEPLOY_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          GITHUB_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
         run: |
           mkdir -p ~/.ssh/
           echo "$ACTION_DEPLOY_KEY" > ~/.ssh/id_rsa
@@ -36,6 +37,7 @@ jobs:
 
           git clone https://github.com/luxinhua/luxinhua.github.io.git
           cd luxinhua.github.io
+          git remote add origin https://luxinhua:$GITHUB_TOKEN@github.com/luxinhua/luxinhua.github.io.git
           rm -rf * 
           cp -rf ../public/* .
           git add .
