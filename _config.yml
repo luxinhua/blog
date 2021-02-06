@@ -105,7 +105,7 @@ theme: Hacker
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy: 
   type: git 
-  repo: https://github.com/luxinhua/luxinhua.github.io
+  repo: git@github.com:luxinhua/luxinhua.github.io.git
   branch: master
   # token: '' 
   message: update article
