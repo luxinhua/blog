@@ -29,25 +29,33 @@ jobs:
 
     - name: install npm depandence...
       run: |
-        npm install  --registry https://registry.npm.taobao.org
+        npm install --registry https://registry.npm.taobao.org
 
     - name: hexo clean and gen HTML...
       run: |
         hexo clean
         hexo g
 
-    - name: Commit files
-      run: |
-        git config --local user.email "2846154596@qq.com"
-        git config --local user.name "xhlu"
-        git commit -m "Add changes" -a
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.DEPLOY_TOKEN }}
-        branch: master
-        directory: ./public
-        repository: https://${{ secrets.DEPLOY_TOKEN }}@github.com/luxinhua/luxinhua.github.io.git
+    - name: Build and Deploy
+      uses: renzhaosy/hexo-deploy-action@master
+      env:
+        PERSONAL_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
+        PUBLISH_REPOSITORY: luxinhua/luxinhua.github.io # The repository the action should deploy to.
+        BRANCH: master  # The branch the action should deploy to.
+        PUBLISH_DIR: ./public # The folder the action should deploy.
+
+    # - name: Commit files
+    #   run: |
+    #     git config --local user.email "2846154596@qq.com"
+    #     git config --local user.name "xhlu"
+    #     git commit -m "Add changes" -a
+    # - name: Push changes
+    #   uses: ad-m/github-push-action@master
+    #   with:
+    #     github_token: ${{ secrets.DEPLOY_TOKEN }}
+    #     branch: master
+    #     directory: ./public
+    #     repository: https://${{ secrets.DEPLOY_TOKEN }}@github.com/luxinhua/luxinhua.github.io.git
 
     # - name: Push md file to Github resp_md_file branch...
     #   uses: x-actions/gh-pages@release/v1
