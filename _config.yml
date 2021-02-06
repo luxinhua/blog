@@ -111,4 +111,4 @@ deploy:
   message: update article
   name: xhlu
   email: 2846154596@qq.com
-  extend_dirs: ./public
+  extend_dirs: public/

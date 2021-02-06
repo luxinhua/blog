@@ -16,7 +16,7 @@ jobs:
       - name: Use Node.js ${{ matrix.node_version }}
         uses: actions/setup-node@v1
         with:
-          version: ${{ matrix.node_version }}
+          node-version: ${{ matrix.node_version }}
       - name: Setup hexo
         env:
           ACTION_DEPLOY_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
@@ -27,7 +27,8 @@ jobs:
           ssh-keyscan github.com >> ~/.ssh/known_hosts
           git config --global user.email "2846154596@qq.com"
           git config --global user.name "xhlu"
-          npm install hexo-cli -g
+          npm install hexo-cli -g --registry https://registry.npm.taobao.org
+          npm install --save hexo-deployer-git --registry https://registry.npm.taobao.org
           npm install
       - name: Hexo deploy
         run: |
