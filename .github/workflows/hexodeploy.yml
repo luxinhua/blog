@@ -1,4 +1,4 @@
-name: new CI
+name: build and Deploy hexo blog
 on:
   push:
     branches:
@@ -50,93 +50,9 @@ jobs:
           git remote rm origin
           git remote add origin git@github.com:luxinhua/luxinhua.github.io.git
           git remote set-url origin git@github.com:luxinhua/luxinhua.github.io.git
+          
           # rm -rf * 
           cp -rf ../public/* .
           git add .
           git commit -m "update article"
           git push origin master
-
-# name: GitHub Actions Build and Deploy
-# on:
-#   push:
-#     branches:
-#     - main    
-#     - master
-
-# jobs:
-#   build-and-deploy:
-#     runs-on: ubuntu-latest
-#     steps:
-#     - name: git checkout...
-#       uses: actions/checkout@v1
-
-#     - name: setup nodejs...
-#       uses: actions/setup-node@v1
-
-#     - name: install hexo...
-#       run: |
-#         npm install hexo-cli -g  --registry https://registry.npm.taobao.org
-        
-#     - name: install hexo-wordcount...
-#       run: | 
-#         npm i --save hexo-wordcount -g  --registry https://registry.npm.taobao.org 
-
-#     - name: install hexo-deployer-git...
-#       run: |
-#         npm install --save hexo-deployer-git  --registry https://registry.npm.taobao.org
-
-#     - name: install npm depandence...
-#       run: |
-#         npm install --registry https://registry.npm.taobao.org
-
-#     - name: hexo clean and gen HTML...
-#       run: |
-#         hexo clean
-#         hexo g
-
-#     - name: git remote -v ...
-#       run: |
-#         git remote -v
-#         ls -al 
-#         tree ./public
-
-#     - name: Deploy # step4
-#       id: deploy
-#       uses: sma11black/hexo-action@v1.0.0
-#       with:
-#         deploy_key: ${{ secrets.SSH_PRIVATE_KEY }}
-#         user_name: xhlu
-#         user_email: 2846154596@qq.com
-
-    # - name: Commit files
-    #   run: |
-    #     git config --local user.email "2846154596@qq.com"
-    #     git config --local user.name "xhlu"
-    #     git commit -m "Add changes" -a
-    # - name: Push changes
-    #   uses: ad-m/github-push-action@master
-    #   with:
-    #     github_token: ${{ secrets.DEPLOY_TOKEN }}
-    #     branch: master
-    #     directory: ./public
-    #     repository: https://${{ secrets.DEPLOY_TOKEN }}@github.com/luxinhua/luxinhua.github.io.git
-
-    # - name: Push md file to Github resp_md_file branch...
-    #   uses: x-actions/gh-pages@release/v1
-    #   with:
-    #     GITHUB_EMAIL: "2846154596@qq.com"
-    #     GITHUB_USERNAME: "xhlu"
-    #     PUBLISH_REPO: https://${{ secrets.DEPLOY_TOKEN }}@github.com/luxinhua/luxinhua.github.io.git
-    #     PUBLISH_BRANCH: ${{ github.ref }}
-    #     PUBLISH_DIR: ./public
-    #     DEPLOY_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-
-    # - name: Deploy
-    #   uses: peaceiris/actions-gh-pages@v2
-    #   with:
-    #     github_token: ${{ secrets.HEXO_VERITY }}
-    #     publish_dir: ./public
-
-    # - name: Finished to deploy
-    #   run: |
-    #     echo "Finished to deploy !!!"
