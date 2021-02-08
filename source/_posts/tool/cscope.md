@@ -1,5 +1,5 @@
 ---
-title: cscope install/config/use
+title: cscope 安装 配置 使用
 categories:
 - tools
 date: 2021/2/8
