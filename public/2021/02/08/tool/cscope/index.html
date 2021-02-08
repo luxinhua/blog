@@ -17,24 +17,20 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>MarkDown Language Reference | 嵌入式</title>
-  <meta name="description" content="一级标题 二级标题 三级标题 四级标题 五级标题       ###### 六级标题 代码块 表格   | 单元格  | 单元格 | 红色字体 注释   ~~~ 任务列表   - [x] 任务二 已做任务 - + 空格 + [x] 换行 (后面空2格) 空行 对齐方式 斜体、粗体、删除线、下划线、背景高亮 超链接、页内链接、自动链接 注脚 自动链接 插图片 多级引用 字体、字号、颜色 流程图 分">
+  <title>cscope 安装，配置，使用 | 嵌入式</title>
+  <meta name="description" content="安装 1sudo apt install cscope  配置 ~&#x2F;.vimrc 中添加如下配置 12345678910111213141516171819202122232425262728293031323334&quot; tags 设置set tags&#x3D;tags;    set autochdirif has(&quot;cscope&quot;)    set csprg&#x3D;&#x2F;usr&#x2F;b">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MarkDown Language Reference">
-<meta property="og:url" content="http://example.com/2021/02/07/markdown/03_language_markdown_ref/index.html">
+<meta property="og:title" content="cscope 安装，配置，使用">
+<meta property="og:url" content="http://example.com/2021/02/08/tool/cscope/index.html">
 <meta property="og:site_name" content="XINHUALU&#39;S BLOG">
-<meta property="og:description" content="一级标题 二级标题 三级标题 四级标题 五级标题       ###### 六级标题 代码块 表格   | 单元格  | 单元格 | 红色字体 注释   ~~~ 任务列表   - [x] 任务二 已做任务 - + 空格 + [x] 换行 (后面空2格) 空行 对齐方式 斜体、粗体、删除线、下划线、背景高亮 超链接、页内链接、自动链接 注脚 自动链接 插图片 多级引用 字体、字号、颜色 流程图 分">
+<meta property="og:description" content="安装 1sudo apt install cscope  配置 ~&#x2F;.vimrc 中添加如下配置 12345678910111213141516171819202122232425262728293031323334&quot; tags 设置set tags&#x3D;tags;    set autochdirif has(&quot;cscope&quot;)    set csprg&#x3D;&#x2F;usr&#x2F;b">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/2021/02/07/markdown/03_language_markdown_ref/images/1.jpg">
-<meta property="og:image" content="http://zh.mweb.im/asset/img/set-up-git.gif">
-<meta property="og:image" content="http://example.com/2021/02/07/markdown/03_language_markdown_ref/%E5%9B%BE%E7%89%87%E5%9C%B0%E5%9D%80">
-<meta property="article:published_time" content="2021-02-06T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-02-08T12:56:39.232Z">
+<meta property="article:published_time" content="2021-02-07T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-02-08T15:52:06.955Z">
 <meta property="article:author" content="XinHua Lu">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2021/02/07/markdown/03_language_markdown_ref/images/1.jpg">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://example.com/2021/02/07/markdown/03_language_markdown_ref/index.html">
+  <link rel="canonical" href="http://example.com/2021/02/08/tool/cscope/index.html">
   
     <link rel="alternate" href="/atom.xml" title="XINHUALU&#39;S BLOG" type="application/atom+xml">
   
@@ -320,16 +316,25 @@
 
   
   
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <nav id="toc" class="article-toc">
+      <h3 class="toc-title">文章目录</h3>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-number">1.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE"><span class="toc-number">2.</span> <span class="toc-text">配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BB%BA%E7%AB%8B%E7%B4%A2%E5%BC%95"><span class="toc-number">3.</span> <span class="toc-text">建立索引</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cscope-%E4%BD%BF%E7%94%A8"><span class="toc-number">4.</span> <span class="toc-text">cscope 使用</span></a></li></ol>
+    </nav>
+  </div>
+</aside>
+
 <main class="main" role="main">
   <div class="content">
-  <article id="post-markdown/03_language_markdown_ref" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-tool/cscope" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      MarkDown Language Reference
+      cscope 安装，配置，使用
     </h1>
   
 
@@ -337,193 +342,41 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/2021/02/07/markdown/03_language_markdown_ref/" class="article-date">
-	  <time datetime="2021-02-06T16:00:00.000Z" itemprop="datePublished">2021-02-07</time>
+	<a href="/2021/02/08/tool/cscope/" class="article-date">
+	  <time datetime="2021-02-07T16:00:00.000Z" itemprop="datePublished">2021-02-08</time>
 	</a>
 </span>
         
   <span class="article-category">
     <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="/categories/markdown/">markdown</a>
+    <a class="article-category-link" href="/categories/tools/">tools</a>
   </span>
 
         
 
         
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2021/02/07/markdown/03_language_markdown_ref/#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2021/02/08/tool/cscope/#comments" class="article-comment-link">评论</a></span>
         
       </div>
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <ul>
-<li><a href="#%E4%B8%80%E7%BA%A7%E6%A0%87%E9%A2%98">一级标题</a><ul>
-<li><a href="#%E4%BA%8C%E7%BA%A7%E6%A0%87%E9%A2%98">二级标题</a><ul>
-<li><a href="#%E4%B8%89%E7%BA%A7%E6%A0%87%E9%A2%98">三级标题</a><ul>
-<li><a href="#%E5%9B%9B%E7%BA%A7%E6%A0%87%E9%A2%98">四级标题</a><ul>
-<li><a href="#%E4%BA%94%E7%BA%A7%E6%A0%87%E9%A2%98">五级标题</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#-%E5%85%AD%E7%BA%A7%E6%A0%87%E9%A2%98">###### 六级标题</a><ul>
-<li><a href="#%E4%BB%A3%E7%A0%81%E5%9D%97">代码块</a></li>
-<li><a href="#%E8%A1%A8%E6%A0%BC">表格</a></li>
-</ul>
-</li>
-<li><a href="#-%E5%8D%95%E5%85%83%E6%A0%BC---%E5%8D%95%E5%85%83%E6%A0%BC-">| 单元格  | 单元格 |</a><ul>
-<li><a href="#%E7%BA%A2%E8%89%B2%E5%AD%97%E4%BD%93">红色字体</a></li>
-<li><a href="#%E6%B3%A8%E9%87%8A">注释</a></li>
-</ul>
-</li>
-<li><a href="#">~~~</a><ul>
-<li><a href="#%E4%BB%BB%E5%8A%A1%E5%88%97%E8%A1%A8">任务列表</a></li>
-</ul>
-</li>
-<li><a href="#--x-%E4%BB%BB%E5%8A%A1%E4%BA%8C-%E5%B7%B2%E5%81%9A%E4%BB%BB%E5%8A%A1----%E7%A9%BA%E6%A0%BC--x">- [x] 任务二 已做任务 <code>- + 空格 + [x]</code></a><ul>
-<li><a href="#%E6%8D%A2%E8%A1%8C-%E5%90%8E%E9%9D%A2%E7%A9%BA2%E6%A0%BC">换行 (后面空2格)</a></li>
-<li><a href="#%E7%A9%BA%E8%A1%8C">空行</a></li>
-<li><a href="#%E5%AF%B9%E9%BD%90%E6%96%B9%E5%BC%8F">对齐方式</a></li>
-<li><a href="#%E6%96%9C%E4%BD%93%E7%B2%97%E4%BD%93%E5%88%A0%E9%99%A4%E7%BA%BF%E4%B8%8B%E5%88%92%E7%BA%BF%E8%83%8C%E6%99%AF%E9%AB%98%E4%BA%AE">斜体、粗体、删除线、下划线、背景高亮</a></li>
-<li><a href="#%E8%B6%85%E9%93%BE%E6%8E%A5%E9%A1%B5%E5%86%85%E9%93%BE%E6%8E%A5%E8%87%AA%E5%8A%A8%E9%93%BE%E6%8E%A5">超链接、页内链接、自动链接</a></li>
-<li><a href="#%E6%B3%A8%E8%84%9A">注脚</a></li>
-<li><a href="#%E8%87%AA%E5%8A%A8%E9%93%BE%E6%8E%A5">自动链接</a></li>
-<li><a href="#%E6%8F%92%E5%9B%BE%E7%89%87">插图片</a></li>
-<li><a href="#%E5%A4%9A%E7%BA%A7%E5%BC%95%E7%94%A8">多级引用</a></li>
-<li><a href="#%E5%AD%97%E4%BD%93%E5%AD%97%E5%8F%B7%E9%A2%9C%E8%89%B2">字体、字号、颜色</a></li>
-<li><a href="#%E6%B5%81%E7%A8%8B%E5%9B%BE">流程图</a><ul>
-<li><a href="#%E5%88%86%E5%89%B2%E7%BA%BF">分割线</a></li>
-</ul>
-</li>
-<li><a href="#html%E8%A1%A8%E5%8D%95">HTML表单</a></li>
-<li><a href="#%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6">特殊字符</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+        <hr>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install cscope</span><br></pre></td></tr></table></figure>
 <hr>
-<h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><h2 id="Markdown-All-in-One-Create-Table-of-Contents"><a href="#Markdown-All-in-One-Create-Table-of-Contents" class="headerlink" title="  Markdown All in One: Create Table of Contents"></a>  Markdown All in One: Create Table of Contents</h2><h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题  "></a>六级标题  <!--最多6级标题--></h6><hr>
-<h3 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h3><p>$符，加行号</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$   <span class="keyword">int</span> a = <span class="number">4</span> ;</span><br></pre></td></tr></table></figure>
-<p>VS</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">4</span> ;</span><br></pre></td></tr></table></figure>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><hr>
+<p>~/.vimrc 中添加如下配置</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot; tags 设置</span></span><br><span class="line"><span class="string">set tags=tags;</span></span><br><span class="line"><span class="string">    set autochdir</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">if has(&quot;</span>cscope<span class="string">&quot;)</span></span><br><span class="line"><span class="string">    set csprg=/usr/bin/cscope</span></span><br><span class="line"><span class="string">    &quot;</span>指定用来执行 cscope 的命令</span><br><span class="line">    <span class="built_in">set</span> csto=1</span><br><span class="line">    <span class="string">&quot;先搜索tags标签文件,再搜索cscope数据库</span></span><br><span class="line"><span class="string">    set cst</span></span><br><span class="line"><span class="string">    &quot;</span>使用|:cstag|(:cs find g),而不是缺省的:tag</span><br><span class="line">    <span class="built_in">set</span> nocsverb</span><br><span class="line">    <span class="string">&quot;不显示添加数据库是否成功</span></span><br><span class="line"><span class="string">    &quot;</span> add any database <span class="keyword">in</span> current directory</span><br><span class="line">    <span class="keyword">if</span> filereadable(<span class="string">&quot;cscope.out&quot;</span>)</span><br><span class="line">        cs add cscope.out</span><br><span class="line">    <span class="string">&quot;添加cscope数据库</span></span><br><span class="line"><span class="string">    endif</span></span><br><span class="line"><span class="string">    &quot;</span>显示添加成功与否</span><br><span class="line">    <span class="built_in">set</span> csverb</span><br><span class="line">endif</span><br><span class="line"></span><br><span class="line">:<span class="built_in">set</span> cscopequickfix=s-,c-,d-,i-,t-,e-</span><br><span class="line"></span><br><span class="line">nmap &lt;C-\&gt;s :cs find s &lt;C-R&gt;=expand(<span class="string">&quot;&lt;cword&gt;&quot;</span>)&lt;CR&gt;&lt;CR&gt;</span><br><span class="line">nmap &lt;C-\&gt;g :cs find g &lt;C-R&gt;=expand(<span class="string">&quot;&lt;cword&gt;&quot;</span>)&lt;CR&gt;&lt;CR&gt;</span><br><span class="line"><span class="comment"># 查找哪里调用了当前的函数</span></span><br><span class="line">nmap &lt;C-\&gt;c :cs find c &lt;C-R&gt;=expand(<span class="string">&quot;&lt;cword&gt;&quot;</span>)&lt;CR&gt;&lt;CR&gt;</span><br><span class="line">nmap &lt;C-\&gt;t :cs find t &lt;C-R&gt;=expand(<span class="string">&quot;&lt;cword&gt;&quot;</span>)&lt;CR&gt;&lt;CR&gt;</span><br><span class="line"><span class="comment"># 查找所有符号</span></span><br><span class="line">nmap &lt;C-\&gt;e :cs find e &lt;C-R&gt;=expand(<span class="string">&quot;&lt;cword&gt;&quot;</span>)&lt;CR&gt;&lt;CR&gt;</span><br><span class="line">nmap &lt;C-\&gt;f :cs find f &lt;C-R&gt;=expand(<span class="string">&quot;&lt;cfile&gt;&quot;</span>)&lt;CR&gt;&lt;CR&gt;</span><br><span class="line">nmap &lt;C-\&gt;i :cs find i ^&lt;C-R&gt;=expand(<span class="string">&quot;&lt;cfile&gt;&quot;</span>)&lt;CR&gt;$&lt;CR&gt;</span><br><span class="line">nmap &lt;C-\&gt;d :cs find d &lt;C-R&gt;=expand(<span class="string">&quot;&lt;cword&gt;&quot;</span>)&lt;CR&gt;&lt;CR&gt;</span><br></pre></td></tr></table></figure>
 <hr>
-<h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><table>
-<thead>
-<tr>
-<th>表头</th>
-<th>表头</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>单元格</td>
-<td>单元格</td>
-</tr>
-<tr>
-<td>单元格</td>
-<td>单元格</td>
-</tr>
-</tbody></table>
+<h3 id="建立索引"><a href="#建立索引" class="headerlink" title="建立索引"></a>建立索引</h3><hr>
+<p>建立脚本，执行生成tag, cscope符号表</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#!&#x2F;bin&#x2F;sh</span><br><span class="line">find &#96;pwd&#96; -name &quot;*.[ch]&quot; -o -name &quot;*.cpp&quot; &gt; cscope.files  </span><br><span class="line">cscope -bRkq -i cscope.files  </span><br><span class="line"></span><br><span class="line">ctags -R</span><br></pre></td></tr></table></figure>
 <hr>
-<h3 id="红色字体"><a href="#红色字体" class="headerlink" title="红色字体"></a>红色字体</h3><hr>
-<h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div style=<span class="string">&#x27;display: none&#x27;</span>&gt;</span><br><span class="line">哈哈我是注释，不会在浏览器中显示。</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-<hr>
-<h3 id="任务列表"><a href="#任务列表" class="headerlink" title="任务列表"></a>任务列表</h3><ul>
-<li><input disabled="" type="checkbox"> 任务一 未做任务 <code>- + 空格 + [ ]</code></li>
-<li><input checked="" disabled="" type="checkbox"> 任务二 已做任务 <code>- + 空格 + [x]</code></li>
-</ul>
-<hr>
-<h3 id="换行-后面空2格"><a href="#换行-后面空2格" class="headerlink" title="换行 (后面空2格)"></a>换行 (后面空2格)</h3><p>nihao<br>faweafe</p>
-<hr>
-<h3 id="空行"><a href="#空行" class="headerlink" title="空行"></a>空行</h3><p>在编辑的时候有多少个空行(只要这一行只有回车或者space没有其他的字符就算空行)，在渲染之后，只隔着一行。</p>
-<hr>
-<h3 id="对齐方式"><a href="#对齐方式" class="headerlink" title="对齐方式"></a>对齐方式</h3><center>行中心对齐</center>
-<p align="left">行左对齐</p>
-<p align="right">行右对齐</p>
-
-<hr>
-<h3 id="斜体、粗体、删除线、下划线、背景高亮"><a href="#斜体、粗体、删除线、下划线、背景高亮" class="headerlink" title="斜体、粗体、删除线、下划线、背景高亮"></a>斜体、粗体、删除线、下划线、背景高亮</h3><p><em>斜体</em>或<em>斜体</em><br><strong>粗体</strong><br><strong><em>加粗斜体</em></strong><br><del>删除线</del><br>++下划线++<br>==背景高亮==</p>
-<hr>
-<h3 id="超链接、页内链接、自动链接"><a href="#超链接、页内链接、自动链接" class="headerlink" title="超链接、页内链接、自动链接"></a>超链接、页内链接、自动链接</h3><ul>
-<li>方法一<br>[]里写链接文字，()里写链接地址, ()中的””中可以为链接指定title属性，title属性可加可不加。title属性的效果是鼠标悬停在链接上会出现指定的 title文字，链接地址与title前有一个空格。</li>
-</ul>
-<p>作者：择势量投<br>链接：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/ebe52d2d468f">https://www.jianshu.com/p/ebe52d2d468f</a><br>来源：简书<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。<br>欢迎阅读 <a target="_blank" rel="noopener" href="https://www.jianshu.com/u/16d77399d3a7" title="择势勤">择势勤</a></p>
-<ul>
-<li>方法二<br>我经常去的几个网站<a target="_blank" rel="noopener" href="http://www.google.com/">Google</a>、<a target="_blank" rel="noopener" href="http://www.leanote.com/">Leanote</a>。</li>
-</ul>
-<hr>
-<h3 id="注脚"><a href="#注脚" class="headerlink" title="注脚"></a>注脚</h3><p>使用 Markdown<a href="Markdown%E6%98%AF%E4%B8%80%E7%A7%8D%E7%BA%AF%E6%96%87%E6%9C%AC%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80">^1</a>可以效率的书写文档, 直接转换成 HTML[^2]。</p>
-<p>[^2]:HyperText Markup Language 超文本标记语言</p>
-<hr>
-<h3 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h3><p>Markdown 支持以比较简短的自动链接形式来处理网址和电子邮件信箱，只要是用&lt;&gt;包起来， Markdown 就会自动把它转成链接。一般网址的链接文字就和链接地址一样，例如：<br>&lt;<a href="http://example.com/">http://example.com/</a>&gt; &emsp;&emsp;<br>&lt;<a href="mailto:&#x61;&#x64;&#100;&#x72;&#101;&#115;&#x73;&#64;&#101;&#120;&#x61;&#109;&#x70;&#x6c;&#x65;&#x2e;&#99;&#111;&#109;">&#x61;&#x64;&#100;&#x72;&#101;&#115;&#x73;&#64;&#101;&#120;&#x61;&#109;&#x70;&#x6c;&#x65;&#x2e;&#99;&#111;&#109;</a>&gt;</p>
-<hr>
-<h3 id="插图片"><a href="#插图片" class="headerlink" title="插图片"></a>插图片</h3><center>  <!--开始居中对齐-->
-
-<p><img src="./images/1.jpg" alt="GitHub set up" title="图片Title"><br><img src="http://zh.mweb.im/asset/img/set-up-git.gif" alt="GitHub set up" title="图片Title"><br>格式: <img src="%E5%9B%BE%E7%89%87%E5%9C%B0%E5%9D%80" alt="图片Alt" title="图片Title"></p>
-</center> <!--结束居中对齐-->
-
-
-<hr>
-<h3 id="多级引用"><a href="#多级引用" class="headerlink" title="多级引用"></a>多级引用</h3><blockquote>
-<blockquote>
-<blockquote>
-<p>请问 Markdwon 怎么用？ - 小白<br>自己看教程！ - 愤青<br>教程在哪？ - 小白</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<hr>
-<h3 id="字体、字号、颜色"><a href="#字体、字号、颜色" class="headerlink" title="字体、字号、颜色"></a>字体、字号、颜色</h3><p><font face="黑体">我是黑体字</font><br><font face="微软雅黑">我是微软雅黑</font><br><font face="STCAIYUN">我是华文彩云</font><br><font color=#0099ff size=12 face="黑体">黑体</font><br><font color=gray size=5>gray</font><br><font color=#00ffff size=3>null</font></p>
-<hr>
-<h3 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a>流程图</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">A--&gt;B</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sequenceDiagram</span><br><span class="line">A-&gt;&gt;B: How are you?</span><br><span class="line">B-&gt;&gt;A: Great!</span><br></pre></td></tr></table></figure>
-<hr>
-<h4 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h4><hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<h3 id="HTML表单"><a href="#HTML表单" class="headerlink" title="HTML表单"></a>HTML表单</h3><center>
-<table>
-<tr>
-<th rowspan="2">值班人员</th>
-<th>星期一</th>
-<th>星期二</th>
-<th>星期三</th>
-</tr>
-<tr>
-<td>李强</td>
-<td>张明</td>
-<td>王平</td>
-</tr>
-</table>
-
-</center>
-
-
-<hr>
-<h3 id="特殊字符"><a href="#特殊字符" class="headerlink" title="特殊字符"></a>特殊字符</h3><table>
-<thead>
-<tr>
-<th>表头</th>
-<th>表头</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>单元格</td>
-<td>单元格</td>
-</tr>
-<tr>
-<td>单元格</td>
-<td>单元格</td>
-</tr>
-</tbody></table>
-<p>｜特殊字符 | 描述 | 字符的代|<br> |  —-  | —-  | —-  |<br>｜   | 空格符 |    &nbsp;|<br>｜&lt; | 小于号 |    &lt; |<br>｜ &gt; | 大于号 | &gt; |<br>｜&amp;     | 和号    | &amp;|<br>｜￥     | 人民币 | &yen;|<br>｜©     | 版权    | &copy;|<br>｜®     | 注册商标    | &reg;|<br>｜°C | 摄氏度 | &deg;|<br>｜±     | 正负号 | &plusmn;|<br>｜×    | 乘号 | &times;|<br>｜÷    | 除号 | &divide;|<br>｜²    | 平方（上标²）| &sup2;|<br>｜³    | 立方（上标³）| &sup3;|</p>
-
+<h3 id="cscope-使用"><a href="#cscope-使用" class="headerlink" title="cscope 使用"></a>cscope 使用</h3><hr>
+<p>快捷键，上面配置中已经配置了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">cscope --help</span><br><span class="line">Usage: cscope [-bcCdehklLqRTuUvV] [-f file] [-F file] [-i file] [-I dir] [-s dir]</span><br><span class="line">            [-p number] [-P path] [-[0-8] pattern] [source files]</span><br><span class="line"></span><br><span class="line">-b            Build the cross-reference only.</span><br><span class="line">-C            Ignore letter case when searching.</span><br><span class="line">-c            Use only ASCII characters in the cross-ref file (don&#39;t compress).</span><br><span class="line">-d            Do not update the cross-reference.</span><br><span class="line">-e            Suppress the &lt;Ctrl&gt;-e command prompt between files.</span><br><span class="line">-F symfile    Read symbol reference lines from symfile.</span><br><span class="line">-f reffile    Use reffile as cross-ref file name instead of cscope.out.</span><br><span class="line">-h            This help screen.</span><br><span class="line">-I incdir     Look in incdir for any #include files.</span><br><span class="line">-i namefile   Browse through files listed in namefile, instead of cscope.files</span><br><span class="line">-k            Kernel Mode - don&#39;t use &#x2F;usr&#x2F;include for #include files.</span><br><span class="line">-L            Do a single search with line-oriented output.</span><br><span class="line">-l            Line-oriented interface.</span><br><span class="line">-num pattern  Go to input field num (counting from 0) and find pattern.</span><br><span class="line">-P path       Prepend path to relative file names in pre-built cross-ref file.</span><br><span class="line">-p n          Display the last n file path components.</span><br><span class="line">-q            Build an inverted index for quick symbol searching.</span><br><span class="line">-R            Recurse directories for files.</span><br><span class="line">-s dir        Look in dir for additional source  files.</span><br><span class="line">-T            Use only the first eight characters to match against C symbols.</span><br><span class="line">-U            Check file time stamps.</span><br><span class="line">-u            Unconditionally build the cross-reference file.</span><br><span class="line">-v            Be more verbose in line mode.</span><br><span class="line">-V            Print the version number.</span><br><span class="line"></span><br><span class="line">Please see the manpage for more information.</span><br></pre></td></tr></table></figure>
       
     </div>
     <div class="article-footer">
@@ -532,7 +385,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="http://example.com/2021/02/07/markdown/03_language_markdown_ref/" title="MarkDown Language Reference" target="_blank" rel="external">http://example.com/2021/02/07/markdown/03_language_markdown_ref/</a>
+      <a href="http://example.com/2021/02/08/tool/cscope/" title="cscope 安装，配置，使用" target="_blank" rel="external">http://example.com/2021/02/08/tool/cscope/</a>
     </li>
     
     <li class="post-copyright-license">
@@ -579,14 +432,23 @@
   <ul class="pager pull-left">
     
     <li class="prev">
-      <a href="/2021/02/07/liveoverflow/hack_binary_example/" title="hack_binary_example"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+      <a href="/2021/02/08/tool/c_binary/" title="c binary 相关工具"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
     </li>
     
     
     <li class="next">
-      <a href="/2021/02/07/uefi/04_UFEI_protocol/" title="UEFI Protocol 机制"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/2021/02/08/tool/vim/" title="vim plug"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
+    
+    <li class="toggle-toc">
+      <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="文章目录" role="button">
+        <span>[&nbsp;</span><span>文章目录</span>
+        <i class="text-collapsed icon icon-anchor"></i>
+        <i class="text-in icon icon-close"></i>
+        <span>]</span>
+      </a>
+    </li>
     
   </ul>
   
