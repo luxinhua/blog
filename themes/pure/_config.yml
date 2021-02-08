@@ -2,12 +2,12 @@
 menu:
   Home: .
   Archives: archives  # 归档
-  Categories: categories  # 分类
-  Tags: tags  # 标签
-  # Repository: repository  # github repositories
-  # Books: books  # 豆瓣书单
-  # Links: links  # 友链
-  # About: about  # 关于
+  Categories: ./categories  # 分类
+  Tags: ./tags  # 标签
+  Repository: repository  # github repositories
+  Books: books  # 豆瓣书单
+  Links: links  # 友链
+  About: about  # 关于
 
 # Enable/Disable menu icons
 menu_icons:
@@ -34,7 +34,7 @@ site:
   title: 嵌入式 # 页面title
   favicon: /favicon.png
   board: <p>个人站还在更新中 ！</p> # 站点公告
-  copyright: false # 底部版权信息
+  copyright: true # 底部版权信息
 
 # config
 config:
