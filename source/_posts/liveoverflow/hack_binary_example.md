@@ -135,3 +135,11 @@ vim 中，执行：%！xxd 可以将二进制转换为十六进制修改。 ：%
     cheking passwd!
     ok you got me
 ~~~
+
+---
+### binaryninga 
+--- 
+有一些GUI工具可以很简单的完成这些步骤，类似的有 binaryninga, 其他的可以在liveoverflow的节目查询
+
+![](patchbinary.png)
+
