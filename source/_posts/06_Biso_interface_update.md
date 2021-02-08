@@ -1,6 +1,10 @@
 ---
 title: BiosInterFace update 的思路
 data: 2021/2/8
+categories:
+- hexo
+toc: true # 是否启用内容索引
+sidebar: none # 是否启用sidebar侧边栏，none：不启用
 ---
 
 ---
