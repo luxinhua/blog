@@ -58,7 +58,7 @@ toc: true # 是否启用内容索引
 ### 建立索引
 ---
 建立脚本，执行生成tag, cscope符号表
-~~~
+~~~bash
     #!/bin/sh
     find `pwd` -name "*.[ch]" -o -name "*.cpp" > cscope.files  
     cscope -bRkq -i cscope.files  
@@ -70,7 +70,7 @@ toc: true # 是否启用内容索引
 ### cscope 使用
 ---
 快捷键，上面配置中已经配置了。
-~~~
+~~~bash
     cscope --help
     Usage: cscope [-bcCdehklLqRTuUvV] [-f file] [-F file] [-i file] [-I dir] [-s dir]
                 [-p number] [-P path] [-[0-8] pattern] [source files]
