@@ -146,7 +146,7 @@ Markdown 支持以比较简短的自动链接形式来处理网址和电子邮�
 <!-- ![GitHub set up](./images/1.jpg "图片Title")
 ![GitHub set up](http://zh.mweb.im/asset/img/set-up-git.gif "图片Title")
 格式: ![图片Alt](图片地址 "图片Title") -->
-<!-- </center> 结束居中对齐 --> -->
+<!-- </center> 结束居中对齐 -->
 
 --- 
 ### 多级引用
