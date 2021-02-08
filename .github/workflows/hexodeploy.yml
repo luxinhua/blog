@@ -44,15 +44,17 @@ jobs:
           npm install
           hexo clean
           hexo g
-          rm -rf .git
-          git clone https://github.com/luxinhua/luxinhua.github.io.git
-          cd luxinhua.github.io
-          git remote rm origin
-          git remote add origin git@github.com:luxinhua/luxinhua.github.io.git
-          git remote set-url origin git@github.com:luxinhua/luxinhua.github.io.git
+          hexo d
+
+          # rm -rf .git
+          # git clone https://github.com/luxinhua/luxinhua.github.io.git
+          # cd luxinhua.github.io
+          # git remote rm origin
+          # git remote add origin git@github.com:luxinhua/luxinhua.github.io.git
+          # git remote set-url origin git@github.com:luxinhua/luxinhua.github.io.git
           
-          # rm -rf * 
-          cp -rf ../public/* .
-          git add .
-          git commit -m "update article"
-          git push origin master
+          # # rm -rf * 
+          # cp -rf ../public/* .
+          # git add .
+          # git commit -m "update article"
+          # git push origin master
