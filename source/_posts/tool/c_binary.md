@@ -1,5 +1,5 @@
 ---
-title: c ---- 小工具
+title: c binary 相关工具
 categories:
 - tools
 date: 2021/2/8
