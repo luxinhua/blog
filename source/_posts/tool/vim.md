@@ -48,20 +48,10 @@ toc: true # 是否启用内容索引
 ~~~
 
 ---
-###
+### 配置实现的插件
 ---
+换行 ALT + 上下 实现vscode类似的换行效果
 ~~~
-~~~
-
-
----
-###
----
-~~~
-~~~
-
----
-###
----
-~~~
+    noremap <A-up> :call feedkeys( line('.')==1 ? '' : 'ddkP' )<CR>
+    noremap <A-down> ddp
 ~~~
