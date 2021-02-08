@@ -140,6 +140,6 @@ vim 中，执行：%！xxd 可以将二进制转换为十六进制修改。 ：%
 ### binaryninga 
 --- 
 有一些GUI工具可以很简单的完成这些步骤，类似的有 binaryninga, 其他的可以在liveoverflow的节目查询
-
+蓝色的表示true分支，红色的flase分支，我们只要屏蔽掉检查的分支，直接过去就可以了
 ![](patchbinary.png)
 
