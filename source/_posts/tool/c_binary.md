@@ -43,9 +43,29 @@ toc: true # 是否启用内容索引
 ### 2进制转16进制 
 ---
 
+1.  vim 中 ：%！xxd   退回二进制： ：%！xxd  -r 
+2.  bash shell: xxd a.out > 16.txt
+
+
+---
+### strings 
+---
+
 ~~~bash 
-    1. vim 中 ：%！xxd   退回二进制： ：%！xxd  -r 
-    1. bash shell: xxd a.out > 16.txt
+~~~
+
+---
+### strings 
+---
+
+~~~bash 
+~~~
+
+---
+### strings 
+---
+
+~~~bash 
 ~~~
 
 ---
@@ -60,59 +80,6 @@ toc: true # 是否启用内容索引
 
 ~~~bash 
 ~~~
----
-### strings 
----
-
-~~~bash 
-~~~
----
-### strings 
----
-
-~~~bash 
-~~~
----
-### strings 
----
-
-~~~bash 
-~~~
----
-### strings 
----
-
-~~~bash 
-~~~
----
-### strings 
----
-
-~~~bash 
-~~~
----
-### strings 
----
-
-~~~bash 
-~~~
----
-### strings 
----
-
-~~~bash 
-~~~
----
-### strings 
----
-
-~~~bash 
-~~~
-
-
-
-
-
 
 
 
