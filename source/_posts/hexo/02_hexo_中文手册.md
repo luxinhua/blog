@@ -1,8 +1,10 @@
 ---
 title: HEXO Hacker 主题中文说明
 date: 2021/2/7
+categories:
+  - hexo
 tags:
-- test
+  - hexo
 toc: true # 是否启用内容索引
 # sidebar: none # 是否启用sidebar侧边栏，none：不启用
 ---

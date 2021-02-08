@@ -1,5 +1,7 @@
 ---
 title: Hello World 
+categories:
+- test
 tags:
 - test
 date: 2021/2/7

@@ -1,6 +1,8 @@
 ---
 title: UEFI Protocol 机制
 date: 2021/2/7
+categories:
+- uefi
 ---
 
 ---
