@@ -14,8 +14,8 @@ menu_icons:
   enable: true  # 是否启用导航菜单图标
   home: icon-home-fill
   archives: icon-archives-fill
-  categories: icon-folder
-  tags: icon-tags
+  categories: icon-folder-fill
+  tags: icon-tags-fill
   repository: icon-project
   books: icon-book-fill
   links: icon-friendship
