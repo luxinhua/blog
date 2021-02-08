@@ -204,33 +204,33 @@ profile:
     link_tooltip: true # enable the social link tooltip, options: true, false
   # My Skills 
   skills:
-    Git: ★★★☆☆
-    Gulp: ★★★☆☆
-    Javascript: ★★★☆☆
-    HTML+CSS: ★★★☆☆
-    Bootstrap: ★★★☆☆
-    ThinkPHP: ★★★☆☆
-    平面设计: ★★★☆☆
+    Git: ★★★★☆
+    linux: ★★★★☆
+    c: ★★★★☆
+
   # My Personal Links
   links:
-    Github: https://github.com/cofess
-    Blog: http://blog.cofess.com
-    微博: http://weibo.com/cofess
-    花瓣: http://huaban.com/cofess
-    Behance: https://www.behance.net/cofess
+    Github: https://github.com/luxinhua
+    Blog: http://luxinhua.github.io
+    # 微博: http://weibo.com/cofess
+    # 花瓣: http://huaban.com/cofess
+    # Behance: https://www.behance.net/cofess
   # My Personal Labels
   labels:
-    - 前端
-    - 前端开发
-    - 前端重构
-    - Web前端
-    - 网页重构
-  # My Personal Works
-  works:
-    name:
-      link: http://www.example.com
-      date: 2015
+    - linux 
+    - c 
+    - zephyr
+    # - 前端
+    # - 前端开发
+    # - 前端重构
+    # - Web前端
+    # - 网页重构
+  # # My Personal Works
+  # works:
+  #   name:
+  #     link: http://www.example.com
+  #     date: 2015
   # My Personal Projects
-  projects:
-    cofess/gulp-startpro: https://github.com/cofess/gulp-startpro
-    cofess/hexo-theme-pure: https://github.com/cofess/hexo-theme-pure
+  # projects:
+    # cofess/gulp-startpro: https://github.com/cofess/gulp-startpro
+    # cofess/hexo-theme-pure: https://github.com/cofess/hexo-theme-pure
