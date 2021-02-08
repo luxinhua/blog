@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000" />
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <title>嵌入式</title>
+  <meta property="og:type" content="website">
+<meta property="og:title" content="XINHUALU&#39;S BLOG">
+<meta property="og:url" content="http://example.com/page/2/index.html">
+<meta property="og:site_name" content="XINHUALU&#39;S BLOG">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="XinHua Lu">
+<meta name="twitter:card" content="summary">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://example.com/page/2/index.html">
+  
+    <link rel="alternate" href="/atom.xml" title="XINHUALU&#39;S BLOG" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+  
+  
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+
+<body class="main-center theme-black" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="https://github.com/luxinhua" target="_blank">
+          <img class="img-circle img-rotate" src="/images/cat.jpeg" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">xhlu</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">嵌入式开发</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> Shanghai, China</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="想要查找什么..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav ">
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">首页</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">归档</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">分类</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-repository">
+          <a href="/repository">
+            
+            <i class="icon icon-project"></i>
+            
+            <span class="menu-title">项目</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-books">
+          <a href="/books">
+            
+            <i class="icon icon-book-fill"></i>
+            
+            <span class="menu-title">书单</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-links">
+          <a href="/links">
+            
+            <i class="icon icon-friendship"></i>
+            
+            <span class="menu-title">友链</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            
+            <i class="icon icon-cup-fill"></i>
+            
+            <span class="menu-title">关于</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/cofess" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="http://weibo.com/cofess" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
+        
+        <li><a href="https://twitter.com/iwebued" target="_blank" title="Twitter" data-toggle=tooltip data-placement=top><i class="icon icon-twitter"></i></a></li>
+        
+        <li><a href="https://www.behance.net/cofess" target="_blank" title="Behance" data-toggle=tooltip data-placement=top><i class="icon icon-behance"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>个人站还在更新中 ！</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget-body">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/bios/">bios</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/liveoverflow/">liveoverflow</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/markdown/">markdown</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/tools/">tools</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/uefi/">uefi</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9D%A2%E8%AF%95/">面试</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">二月 2021</a><span class="archive-list-count">11</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/bios/">bios</a>
+              </p>
+              <p class="item-title">
+                <a href="/2021/02/08/bios/06_Biso_interface_update/" class="title">BiosInterFace update 的思路</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2021-02-08T12:56:39.232Z" itemprop="datePublished">2021-02-08</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/tools/">tools</a>
+              </p>
+              <p class="item-title">
+                <a href="/2021/02/08/tool/c_binary/" class="title">c binary 相关工具</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2021-02-07T16:00:00.000Z" itemprop="datePublished">2021-02-08</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/tools/">tools</a>
+              </p>
+              <p class="item-title">
+                <a href="/2021/02/08/tool/cscope/" class="title">cscope 安装 配置 使用</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2021-02-07T16:00:00.000Z" itemprop="datePublished">2021-02-08</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/tools/">tools</a>
+              </p>
+              <p class="item-title">
+                <a href="/2021/02/08/tool/vim/" class="title">vim plug</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2021-02-07T16:00:00.000Z" itemprop="datePublished">2021-02-08</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/tools/">tools</a>
+              </p>
+              <p class="item-title">
+                <a href="/2021/02/08/tool/youtuber_dll/" class="title">Youtube-dl youtube视频批量下载</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2021-02-07T16:00:00.000Z" itemprop="datePublished">2021-02-08</time>
+              </p>
+            </div>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
+  
+
+    
+  </div>
+</aside>
+
+  
+  <main class="main" role="main">
+  
+  
+    <div class="content">
+  <article id="post-interview/interview" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/02/07/interview/interview/">面试知识点</a>
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2021/02/07/interview/interview/" class="article-date">
+	  <time datetime="2021-02-06T16:00:00.000Z" itemprop="datePublished">2021-02-07</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/%E9%9D%A2%E8%AF%95/">面试</a>
+  </span>
+
+        
+
+        
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2021/02/07/interview/interview/#comments" class="article-comment-link">评论</a></span>
+        
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <hr>
+<h3 id="中断"><a href="#中断" class="headerlink" title="中断"></a>中断</h3><hr>
+<pre><code>中断分为上半部和下半部，上半部关中断；下半部开中断，处理可以延迟的事情。下半部有workqueue/softirq/tasklet三种方式
+顶半部，硬件作答，快速响应
+底半部，延时执行
+</code></pre>
+<hr>
+<h3 id="local-irq-disable和disable-irq区别："><a href="#local-irq-disable和disable-irq区别：" class="headerlink" title="local_irq_disable和disable_irq区别："></a>local_irq_disable和disable_irq区别：</h3><hr>
+<hr>
+<h3 id="workquence"><a href="#workquence" class="headerlink" title="workquence"></a>workquence</h3><hr>
+<pre><code>工作队列允许重新调度甚至是睡眠, 
+workqueue_struct d-&gt;work    
+INIT_WORK(&amp;d-&gt;work, work_task);
+schedule_work(&amp;d-&gt;work); 指定cpu
+destroy_workqueue()
+</code></pre>
+<hr>
+<h3 id="softirq"><a href="#softirq" class="headerlink" title="softirq"></a>softirq</h3><hr>
+<pre><code>无法sleep
+静态定义软中断数组softirq_vec, 存放各自的中断处理函数softirq_action
+    每个CPU都有一个这样的数组，谁发起，谁执行
+    内核限制32个， 如mac_tx, mac_rx, tasklet, 定时器
+使用： 
+    void open_softirq(int nr, void (*action)(struct softirq_action *))   添加中断回调函数。
+    raise_softirq() 触发软中断 ，就是在pre-cpu变量__softirq_pending上置位。然后local_softirq_pending() 检测那些pending， 执行invoke_softirq()
+        如果多个softirq pending, 按数组顺序执行。
+    网络收发软中断有超时机制，和次数限制。
+</code></pre>
+<hr>
+<h3 id="tasklet-演示40ms"><a href="#tasklet-演示40ms" class="headerlink" title="tasklet 演示40ms"></a>tasklet 演示40ms</h3><hr>
+<pre><code>无法睡眠
+pre-cpu 维护一tasklet list , tasklet一旦挂入一个cpu的tasklet表，就只会在该cpu上运行，哪怕被重新调度
+使用： 
+    DECLARE_TASKLET(&amp;port-&gt;tasklet, callback, data)
+    tasklet_schedule(&amp;port-&gt;tasklet);
+    tasklet_kill(&amp;port-&gt;tasklet);
+        tasklet_disable(&amp;port-&gt;tasklet);只用于disable tasklet , 而local_bh_disable/enable 是disable bh 操作 softirq/tasklet.
+        tasklet_enable(&amp;port-&gt;tasklet);
+</code></pre>
+<hr>
+<h3 id="runqueue"><a href="#runqueue" class="headerlink" title="runqueue"></a>runqueue</h3><hr>
+<p>linux 就绪队列struct runqueue，每个CPU都有一个执行队列，队列中以work的形式执行每个任务。</p>
+<hr>
+<h3 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h3><hr>
+<p>进程切换，有能力挂起正在CPU上执行的进程，和恢复执行。<br>进程调度由schedule()函数实现</p>
+<hr>
+<h3 id="complete-进程同步机制"><a href="#complete-进程同步机制" class="headerlink" title="complete 进程同步机制"></a>complete 进程同步机制</h3><hr>
+<pre><code>struct completion &#123;
+    unsigned int done;/*用于同步的原子量*/    类似信号量，等待一个减1 
+    wait_queue_head_t wait;/*等待事件队列*/
+&#125;;
+</code></pre>
+<p>用法：<br>    这个变量可以静态地声明和初始化：<br>    DECLARE_COMPLETION(my_comp);<br>    或者动态初始化：<br>    struct completion my_comp;<br>    init_completion(&amp;my_comp);<br>    wait_for_completion(struct completion *comp);等待其他事件完成 ， 将当前进程放入wait quence尾，sch超时唤醒后，循环检测done是否可用<br>        其他事件完成后调用complete(struct completion *comp); 唤醒等待该事件的所在进程</p>
+<hr>
+<h3 id="notify-机制，-模块之间通信"><a href="#notify-机制，-模块之间通信" class="headerlink" title="notify 机制， 模块之间通信"></a>notify 机制， 模块之间通信</h3><hr>
+<pre><code>struct notifier_block
+&#123;
+    int (*notifier_call)(struct notifier_block *self, unsigned long, void *);
+    struct notifier_block *next;
+    int priority;
+&#125;;
+notifier_chain_register
+notifier_call_chain
+</code></pre>
+<hr>
+<h3 id="devicefs"><a href="#devicefs" class="headerlink" title="devicefs"></a>devicefs</h3><hr>
+<pre><code>DEVICE_ATTR  需要绑定设备
+struct device_attribute &#123;
+    struct attribute    attr;
+    ssize_t (*show)(struct device *dev, struct device_attribute *attr,char *buf);
+    ssize_t (*store)(struct device *dev, struct device_attribute *attr,const char *buf, size_t count);
+&#125;;
+DEVICE_ATTR  实现一些这样的设备属性结构
+sysfs_create_file(&amp;mydevice-&gt;kobj, &amp;dev_attr_mydevice.attr);  绑定设备与设备属性
+</code></pre>
+<hr>
+<h3 id="debugfs"><a href="#debugfs" class="headerlink" title="debugfs"></a>debugfs</h3><hr>
+<pre><code>无需绑定设备，mount debugfs 之后就可以在该目录下找到我们的节点
+debugfs_create_dir(const char *name, struct dentry *parent); 
+debugfs_create_file(&quot;stats&quot;, S_IRUGO | S_IWUSR, client-&gt;debugfs,client, &amp;debugfs_stats_ops);  绑定文件和函数操作集合
+</code></pre>
+<hr>
+<h3 id="Cmake-mafile工程的构建工具"><a href="#Cmake-mafile工程的构建工具" class="headerlink" title="Cmake mafile工程的构建工具"></a>Cmake mafile工程的构建工具</h3><hr>
+<p>简单语法：<br>    include_directories (“${PROJECT_SOURCE_DIR}/MathFunctions”) 添加include<br>    add_subdirectory (MathFunctions)   添加子目录<br>    add_executable (Tutorial tutorial.cxx)   定义一个可执行文件，以及依赖的源文件<br>    target_link_libraries (Tutorial MathFunctions)  链接库</p>
+<hr>
+<h3 id="makefile"><a href="#makefile" class="headerlink" title="makefile"></a>makefile</h3><hr>
+<pre><code>$@  表示目标文件
+$^  表示所有的依赖文件
+$&lt;  表示第一个依赖文件
+$?  表示比目标还要新的依赖文件列表
+</code></pre>
+<hr>
+<h3 id="原子操作"><a href="#原子操作" class="headerlink" title="原子操作"></a>原子操作</h3><hr>
+<hr>
+<h3 id="锁的使用："><a href="#锁的使用：" class="headerlink" title="锁的使用："></a>锁的使用：</h3><hr>
+<p>spinlock:<br>    死等，或者挂起当前进程<br>    一次只有一个thread获取锁<br>    因为可以睡眠，所以可以在BH中使用。<br>使用：<br>    spin_lock   关闭内核抢占，也就是说同时只能一个进程获取这个锁，不关闭的，其他的进程抢占，抢占之后发现需要之前的进程解锁才能继续执行，就会导致死锁。<br>    spin_lock_bh  spin_lock_softirq 加了这把锁，本地软中断会被禁用。<br>        使用场景： 比如配合tasklet，害怕被软中断sch，又请求锁住的资源，造成死锁。<br>    spin_lock_irq  加了这把锁，本地软中断会被禁用。本地hard irq会被禁用。<br>    spin_lock_irqsave 禁用本地hard irq ， 但是会保存中断状态，配合spin_unlock_irqrestore 进入退出，还原中断状态。<br>    spin_lock_nested 为了配合lockdep 机制，防止误报重复上锁的</p>
+<hr>
+<h3 id="互斥锁mutex，-锁住线程共享资源"><a href="#互斥锁mutex，-锁住线程共享资源" class="headerlink" title="互斥锁mutex， 锁住线程共享资源"></a>互斥锁mutex， 锁住线程共享资源</h3><hr>
+<pre><code>pthread_mutex_lock 无法获取该所示，进入阻塞（睡眠，这些睡眠的线程会排队访问互斥量），pthread_mutex_trylock 就不会阻塞，直接返回ebusy
+</code></pre>
+<hr>
+<h3 id="读写锁rwlock"><a href="#读写锁rwlock" class="headerlink" title="读写锁rwlock"></a>读写锁rwlock</h3><hr>
+<pre><code>pthread_rwlock_rdlock(pthread_rwlock_t *rwpt);
+pthread_rwlock_wrlock(pthread_rwlock_t *rwpt);
+pthread_rwlock_unlock(pthread_rwlock_t *rwpt);
+</code></pre>
+<hr>
+<h3 id="死锁的例子"><a href="#死锁的例子" class="headerlink" title="死锁的例子"></a>死锁的例子</h3><hr>
+<pre><code>2个线程持有2把锁，交叉互锁，出现死锁。
+</code></pre>
+<hr>
+<h3 id="进程空间"><a href="#进程空间" class="headerlink" title="进程空间"></a>进程空间</h3><hr>
+<p>进程为什么是4G寻址空间， 一个指针是4字节 32位，寻址能力是2的32次方，是4G.<br>32位linux , 一个进程空间4G，内核占1G，用户留3G，一个线程默认8M(但是因为还要包括 栈区，txt,data， heap 所以实际是大概6M)，所以最多380个左右线程<br>进程栈16K.<br>虚拟空间的3G还要分区：<br>    ①栈空间：特点是由系统管理，先进后出，里面放了局部变量、函数形参、自动变量。<br>    ②堆空间：特点是由用户管理，先进后出，我们可以用malloc、ralloc、calloc来分配空间。<br>        alloc(sizeof(int));  物理连续内存<br>        vmalloc属性：可能睡眠、虚拟地址连续、物理地址不连续、size对齐到页；所以不适合小内存分配，开销较大。<br>        realloc(p, SIZE * 2); 为已经分配空间的指针重新分配空间。<br>            如果新的空间小于旧的空间，则指针不变，<br>            如果大于， 则申请更大空间，然后拷贝原来的内容， 清空就的指针空间。<br>        calloc(SIZE, sizeof(int));  和malloc 一样，但是会全部初始化为0,不需要memset.<br>    ③数据段：数据段里面又分三块，第一块是bss，保存未初始化的全局变量；第二块是rodata，保存了常量；第三块  是.data（静态数据区）保存了初始化的全局变量还有static修饰的变量。<br>    ④代码段：存放了源代码。</p>
+<hr>
+<h3 id="kernel-userspace-空间"><a href="#kernel-userspace-空间" class="headerlink" title="kernel/userspace 空间"></a>kernel/userspace 空间</h3><hr>
+<p>kernel 空间分区<br>userspace 空间分区</p>
+<hr>
+<h3 id="arm-终端流程："><a href="#arm-终端流程：" class="headerlink" title="arm 终端流程："></a>arm 终端流程：</h3><hr>
+<p>中断流程， A系列不支持中断嵌套 M系列支持<br>    进入中断<br>        保存CPSR到对应cpu的SPSR_mode<br>        关中断<br>        切换到异常状态<br>        保存PC到LR<br>        设置PC到中断向量表中的对应处理函数地址中<br>    恢复中断<br>        恢复 SPSR_mode 到 CPSR<br>        恢复 lr_mode 到 PC<br>        恢复普通寄存器：R0-R7，操作sp将栈中将数据恢复。</p>
+<hr>
+<h3 id="devmem"><a href="#devmem" class="headerlink" title="devmem"></a>devmem</h3><hr>
+<p>访问dts定义的内存范围内的外设寄存器访问，操作的是物理寄存器</p>
+<hr>
+<h3 id="物理内存，虚拟内存如何组织映射。"><a href="#物理内存，虚拟内存如何组织映射。" class="headerlink" title="物理内存，虚拟内存如何组织映射。"></a>物理内存，虚拟内存如何组织映射。</h3><hr>
+<pre><code>虚拟地址空间比可用的物理内存大很多，因此只有最常用的部分才与物理页帧关联
+这不是问题，因为大多数程序只占用实际可用内存的一小部分
+</code></pre>
+<hr>
+<h3 id="野指针"><a href="#野指针" class="headerlink" title="野指针"></a>野指针</h3><hr>
+<p>指针在被定义的时候，如果程序不对其进行初始化的话，它会随机指向一个区域，不能判断是否为NULL。</p>
+<hr>
+<h3 id="strcpy"><a href="#strcpy" class="headerlink" title="strcpy"></a>strcpy</h3><hr>
+<hr>
+<h3 id="strcmp"><a href="#strcmp" class="headerlink" title="strcmp"></a>strcmp</h3><hr>
+<hr>
+<h3 id="strlen"><a href="#strlen" class="headerlink" title="strlen"></a>strlen</h3><hr>
+<hr>
+<h3 id="排序算法有哪些"><a href="#排序算法有哪些" class="headerlink" title="排序算法有哪些"></a>排序算法有哪些</h3><hr>
+<pre><code>冒泡排序
+选择排序
+插入排序
+希尔排序
+归并排序
+    迭代法
+    递归法
+快速排序
+    迭代法
+    递归法
+</code></pre>
+<hr>
+<h3 id="c-函数型参处于那个内存空间"><a href="#c-函数型参处于那个内存空间" class="headerlink" title="c 函数型参处于那个内存空间"></a>c 函数型参处于那个内存空间</h3><hr>
+<p>  形参的传递在arm架构中，如果你的参数少于三个，则是通过R0或R0、R1或R0、R1、R2传递过去的，如果多余三个则是多出来的是通过堆栈传递的<br>  实参是放栈上的<br>    行参是一个占位符，它没有数据<br>    发生函数调用时，实参的值会传递给形参<br>    形参和实参虽然可以同名，但它们之间是相互独立的，互不影响，因为实参在函数外部有效，而形参在函数内部有效。<br>    函数返回值将会又主函数开辟一个临时的新的内存空间来保存</p>
+<hr>
+<h3 id="2分法查找"><a href="#2分法查找" class="headerlink" title="2分法查找"></a>2分法查找</h3><hr>
+<hr>
+<h3 id="AT-命令"><a href="#AT-命令" class="headerlink" title="AT 命令"></a>AT 命令</h3><hr>
+<hr>
+<h3 id="lcd-原理"><a href="#lcd-原理" class="headerlink" title="lcd 原理"></a>lcd 原理</h3><hr>
+<hr>
+<h3 id="frambuffer-机制"><a href="#frambuffer-机制" class="headerlink" title="frambuffer 机制"></a>frambuffer 机制</h3><hr>
+<hr>
+<h3 id="http-ftp-TCP-IP-协议"><a href="#http-ftp-TCP-IP-协议" class="headerlink" title="http ftp TCP/IP 协议"></a>http ftp TCP/IP 协议</h3><hr>
+<hr>
+<h3 id="spsr"><a href="#spsr" class="headerlink" title="spsr"></a>spsr</h3><hr>
+<p>cpsr[31:28/条件标志，执行汇编的算数运算时，表示运算结果]<br>NZCV<br>[27:8] 保留<br>[7：5 | 7:I/irq使能  6:F/快中断 5：T状态位，arm/thumb] t=1 强制进入未定义指令中断<br>[4:0] 模式</p>
+<hr>
+<h3 id="物理-虚拟地址映射"><a href="#物理-虚拟地址映射" class="headerlink" title="物理/虚拟地址映射"></a>物理/虚拟地址映射</h3><hr>
+<pre><code>32位linux总地址4G 一级页表页大小4K, 共4G/4k个页， 
+每1M个页组成1个页目录，1M个页目录是一个固定入口地址， 存在CR3 中。
+二级页表存储1M页目录 页目录地址-&gt; CR3寄存器 
+</code></pre>
+<p>一个虚拟地址的组成：<br>    DIRECTORY [22：31] 可表示1024个页目录（PGD）<br>    TABLE[12：21] 可表示1024个页表（PTE)<br>    OFFSET[22：31] 可表示4096个物理内存</p>
+<hr>
+<h3 id="copy-to-user-copy-form-user"><a href="#copy-to-user-copy-form-user" class="headerlink" title="copy_to_user/copy_form_user"></a>copy_to_user/copy_form_user</h3><hr>
+<pre><code>虚拟内存地址对应的物理内存与内核虚拟内存地址对应的物理内存
+</code></pre>
+<hr>
+<h3 id="mmap"><a href="#mmap" class="headerlink" title="mmap"></a>mmap</h3><hr>
+<pre><code>用户空间虚拟地址与物理地址的map 目标是在用户空间访问硬件，所有可以省去映射到kernel虚拟空间这一步。
+</code></pre>
+<hr>
+<h3 id="ioremap"><a href="#ioremap" class="headerlink" title="ioremap"></a>ioremap</h3><hr>
+<pre><code>内核空间虚拟地址与物理地址的map
+</code></pre>
+<hr>
+<h3 id="IPC-机制"><a href="#IPC-机制" class="headerlink" title="IPC 机制"></a>IPC 机制</h3><hr>
+<hr>
+<h3 id="信号"><a href="#信号" class="headerlink" title="信号"></a>信号</h3><hr>
+<hr>
+<h3 id="信号量"><a href="#信号量" class="headerlink" title="信号量"></a>信号量</h3><hr>
+<hr>
+<h3 id="管道"><a href="#管道" class="headerlink" title="管道"></a>管道</h3><hr>
+<hr>
+<h3 id="消息队列"><a href="#消息队列" class="headerlink" title="消息队列"></a>消息队列</h3><hr>
+<hr>
+<h3 id="itouch"><a href="#itouch" class="headerlink" title="itouch"></a>itouch</h3><hr>
+<p>hexgon SDK running time logger , fastRPC</p>
+<hr>
+<h3 id="TDDI-时序同步"><a href="#TDDI-时序同步" class="headerlink" title="TDDI , 时序同步"></a>TDDI , 时序同步</h3><hr>
+<hr>
+<h3 id="屏幕基本"><a href="#屏幕基本" class="headerlink" title="屏幕基本"></a>屏幕基本</h3><hr>
+<pre><code>一个像素8bit RGB 
+信号发生时间    
+    vsync 到一帧的最后一个像素 -&gt; 发出VBP(帧后的同步时间) -&gt; hsync 行同步信号 -&gt; HBP行后同步时间 -&gt; 一行像素 -&gt; HFP行前同步信号 -&gt; VFP帧前同步信号
+</code></pre>
+<hr>
+<h3 id="android-版本更新时间节点"><a href="#android-版本更新时间节点" class="headerlink" title="android 版本更新时间节点"></a>android 版本更新时间节点</h3><hr>
+<hr>
+<h3 id="霍尔器件的驱动移植"><a href="#霍尔器件的驱动移植" class="headerlink" title="霍尔器件的驱动移植"></a>霍尔器件的驱动移植</h3><hr>
+<p>霍尔器件是磁感应器件，上电后，当检测到磁性物体靠近，中断脚就会产生一个高脉冲。<br>1，在DWS文件中配置上电，中断等管脚，然后在DTS中编写基础配置；<br>2，编写一个字符驱动，内含中断注册，检测，并向上层提供调用接口。</p>
+<hr>
+<h3 id="improveTouch"><a href="#improveTouch" class="headerlink" title="improveTouch"></a>improveTouch</h3><hr>
+<p>1，高通android参考机外设improveTouch研发，区别于传统的第三方touch， improveTouch核心算法主要放在dsp中运算，通过userspace nativea app控制，kernel driver向input子系统转发触摸事件。<br>2，算法组维护adsp中的hal，算法，系统组负责平台的移植 userspace/kernel的代码维护。<br>3，我主要是编写 dts/driver 的代码，通过pinctrl/set_regulator等kernel api 管理硬件资源,维护usersapce的代码，开发版本的整合，wiki文档的更新。解决内部测试团队发现的bug。<br>4，其他芯片平台有过secureTouch的开发例子,对于新的touch驱动做一个移植，跑通。<br>主要是在kernel 和trustzone子系统中添加code。</p>
+<hr>
+<h3 id="crash"><a href="#crash" class="headerlink" title="crash"></a>crash</h3><hr>
+<p>工具的使用，死机问题分析</p>
+<hr>
+<h3 id="mem"><a href="#mem" class="headerlink" title="mem"></a>mem</h3><hr>
+<p>我理解是DDR</p>
+<hr>
+<h3 id="devmem-1"><a href="#devmem-1" class="headerlink" title="devmem"></a>devmem</h3><hr>
+<p>访问dts定义的内存范围内的外设寄存器访问，操作的是物理寄存器</p>
+<hr>
+<h3 id="http-ftp-TCP-IP-协议-1"><a href="#http-ftp-TCP-IP-协议-1" class="headerlink" title="http ftp TCP/IP 协议"></a>http ftp TCP/IP 协议</h3><hr>
+<hr>
+<h3 id="触摸屏突然不亮检查流程"><a href="#触摸屏突然不亮检查流程" class="headerlink" title="触摸屏突然不亮检查流程"></a>触摸屏突然不亮检查流程</h3><hr>
+<p>上电，reset电路，总线通信。getevent检查多点触摸协议报点是否有，是否符合报点规范。</p>
+<hr>
+<h3 id="stack"><a href="#stack" class="headerlink" title="stack"></a>stack</h3><hr>
+<p>栈由高到低生长 kernel栈16K</p>
+<hr>
+<h3 id="uart-子系统"><a href="#uart-子系统" class="headerlink" title="uart 子系统"></a>uart 子系统</h3><hr>
+<hr>
+<h3 id="网络-子系统"><a href="#网络-子系统" class="headerlink" title="网络 子系统"></a>网络 子系统</h3><hr>
+<hr>
+<h3 id="misc驱动"><a href="#misc驱动" class="headerlink" title="misc驱动"></a>misc驱动</h3><hr>
+<hr>
+<h3 id="input系统"><a href="#input系统" class="headerlink" title="input系统"></a>input系统</h3><hr>
+<hr>
+<h3 id="多点触摸协议"><a href="#多点触摸协议" class="headerlink" title="多点触摸协议"></a>多点触摸协议</h3><hr>
+<hr>
+<h3 id="手势检测"><a href="#手势检测" class="headerlink" title="手势检测"></a>手势检测</h3><hr>
+<hr>
+<h3 id="M7-i2c"><a href="#M7-i2c" class="headerlink" title="M7 i2c"></a>M7 i2c</h3><hr>
+<pre><code>发出从地址后，没有ack
+    从地址不对？ 轮寻一定范围的地址，查看是否有ack.
+M7的时钟 200/300/400M
+i2c 低中高时钟 100K/
+</code></pre>
+<hr>
+<h3 id="Rtos-与-linux的区别"><a href="#Rtos-与-linux的区别" class="headerlink" title="Rtos 与 linux的区别"></a>Rtos 与 linux的区别</h3><hr>
+<hr>
+<h3 id="sn3193-类似芯片"><a href="#sn3193-类似芯片" class="headerlink" title="sn3193 类似芯片"></a>sn3193 类似芯片</h3><hr>
+<pre><code>关键参数流程
+</code></pre>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="http://example.com/2021/02/07/interview/interview/" title="面试知识点" target="_blank" rel="external">http://example.com/2021/02/07/interview/interview/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/luxinhua" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/cat.jpeg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/luxinhua" target="_blank"><span class="text-dark">xhlu</span><small class="ml-1x">嵌入式开发</small></a></h3>
+        <div>个人简介。</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
+  
+</div>
+
+  
+
+  
+    
+    <nav class="bar bar-footer clearfix" data-stick-bottom>
+        <div class="bar-inner">
+        <ul class="pager pull-left">
+            
+            <li class="prev">
+                <a href="/">
+                    <i class="icon icon-angle-left"></i>
+                    上一页
+                </a>
+            </li>
+            
+            
+            <li class="next disabled">
+                <a href="javascript:;">
+                    下一页
+                    <i class="icon icon-angle-right"></i>                    
+                </a>
+            </li>
+            
+        </ul>
+        <div class="total-article bar-right">Page 2 of 2</div>
+        </div>
+    </nav>
+    
+ 
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/cofess" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="http://weibo.com/cofess" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
+        
+        <li><a href="https://twitter.com/iwebued" target="_blank" title="Twitter" data-toggle=tooltip data-placement=top><i class="icon icon-twitter"></i></a></li>
+        
+        <li><a href="https://www.behance.net/cofess" target="_blank" title="Behance" data-toggle=tooltip data-placement=top><i class="icon icon-behance"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+        &copy; 2021 XinHua Lu
+        
+        <div class="publishby">
+        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        </div>
+    </div>
+</footer>
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+
+<script src="/js/plugin.min.js"></script>
+
+
+<script src="/js/application.js"></script>
+
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+</body>
+</html>

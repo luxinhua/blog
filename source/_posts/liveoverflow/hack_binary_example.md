@@ -1,5 +1,5 @@
 ---
-title: hack_binary_example
+title: hack binary example
 date: 2021/2/7
 categories: liveoverflow
 ---
