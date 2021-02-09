@@ -30,13 +30,6 @@ toc: true # 是否启用内容索引
     WRONG !
     Usage: <key>
     :*3$"
-    GCC: (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.0
-    /usr/lib/gcc/x86_64-linux-gnu/9/include
-    /usr/include/x86_64-linux-gnu/bits
-    /usr/include/x86_64-linux-gnu/bits/types
-    /usr/include
-    main.c
-    stddef.h
 ~~~
 
 ---
@@ -46,12 +39,28 @@ toc: true # 是否启用内容索引
 1.  vim 中 ：%！xxd   退回二进制： ：%！xxd  -r 
 2.  bash shell: xxd a.out > 16.txt
 
-
 ---
-### strings 
+### file 
 ---
 
 ~~~bash 
 ~~~
+
+---
+### readelf 
+---
+查看程序段信息, [参考文档](https://blog.csdn.net/yfldyxl/article/details/81566279)
+~~~bash 
+readelf -S a.out   #  -S(section headers),sections 
+~~~
+
+
+---
+### addr2line
+---
+
+~~~bash 
+~~~
+
 
 
