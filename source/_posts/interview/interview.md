@@ -1,15 +1,15 @@
 ---
-title: 面试知识点
+title: interview
 date: 2021/2/9
-categories: 面试
+categories: interview
 ---
 
 ---
 ### 中断
 ---
-    中断分为上半部和下半部，上半部关中断；下半部开中断，处理可以延迟的事情。下半部有workqueue/softirq/tasklet三种方式
-    顶半部，硬件作答，快速响应
-    底半部，延时执行
+中断分为上半部和下半部，上半部关中断；下半部开中断，处理可以延迟的事情。下半部有workqueue/softirq/tasklet三种方式
+顶半部，硬件作答，快速响应
+底半部，延时执行
 
 ---
 ### local_irq_disable和disable_irq区别：
@@ -18,36 +18,36 @@ categories: 面试
 ---
 ### workquence 
 ---
-    工作队列允许重新调度甚至是睡眠, 
-    workqueue_struct d->work    
-    INIT_WORK(&d->work, work_task);
-    schedule_work(&d->work); 指定cpu
-    destroy_workqueue()
+工作队列允许重新调度甚至是睡眠, 
+workqueue_struct d->work    
+INIT_WORK(&d->work, work_task);
+schedule_work(&d->work); 指定cpu
+destroy_workqueue()
 
 ---
 ### softirq 
 ---
-    无法sleep
-    静态定义软中断数组softirq_vec, 存放各自的中断处理函数softirq_action
-        每个CPU都有一个这样的数组，谁发起，谁执行
-        内核限制32个， 如mac_tx, mac_rx, tasklet, 定时器
-    使用： 
-        void open_softirq(int nr, void (*action)(struct softirq_action *))   添加中断回调函数。
-        raise_softirq() 触发软中断 ，就是在pre-cpu变量__softirq_pending上置位。然后local_softirq_pending() 检测那些pending， 执行invoke_softirq()
-            如果多个softirq pending, 按数组顺序执行。
-        网络收发软中断有超时机制，和次数限制。
+无法sleep
+静态定义软中断数组softirq_vec, 存放各自的中断处理函数softirq_action
+    每个CPU都有一个这样的数组，谁发起，谁执行
+    内核限制32个， 如mac_tx, mac_rx, tasklet, 定时器
+使用： 
+    void open_softirq(int nr, void (*action)(struct softirq_action *))   添加中断回调函数。
+    raise_softirq() 触发软中断 ，就是在pre-cpu变量__softirq_pending上置位。然后local_softirq_pending() 检测那些pending， 执行invoke_softirq()
+        如果多个softirq pending, 按数组顺序执行。
+    网络收发软中断有超时机制，和次数限制。
 
 ---
 ### tasklet 演示40ms
 ---
-    无法睡眠
-    pre-cpu 维护一tasklet list , tasklet一旦挂入一个cpu的tasklet表，就只会在该cpu上运行，哪怕被重新调度
-    使用： 
-        DECLARE_TASKLET(&port->tasklet, callback, data)
-        tasklet_schedule(&port->tasklet);
-        tasklet_kill(&port->tasklet);
-            tasklet_disable(&port->tasklet);只用于disable tasklet , 而local_bh_disable/enable 是disable bh 操作 softirq/tasklet.
-            tasklet_enable(&port->tasklet);
+无法睡眠
+pre-cpu 维护一tasklet list , tasklet一旦挂入一个cpu的tasklet表，就只会在该cpu上运行，哪怕被重新调度
+使用： 
+    DECLARE_TASKLET(&port->tasklet, callback, data)
+    tasklet_schedule(&port->tasklet);
+    tasklet_kill(&port->tasklet);
+        tasklet_disable(&port->tasklet);只用于disable tasklet , 而local_bh_disable/enable 是disable bh 操作 softirq/tasklet.
+        tasklet_enable(&port->tasklet);
 ---
 ### runqueue
 ---
@@ -62,10 +62,10 @@ linux 就绪队列struct runqueue，每个CPU都有一个执行队列，队列�
 ---
 ### complete 进程同步机制
 ---
-    struct completion {
-        unsigned int done;/*用于同步的原子量*/    类似信号量，等待一个减1 
-        wait_queue_head_t wait;/*等待事件队列*/
-    };
+struct completion {
+    unsigned int done;/*用于同步的原子量*/    类似信号量，等待一个减1 
+    wait_queue_head_t wait;/*等待事件队列*/
+};
 用法： 
     这个变量可以静态地声明和初始化：
     DECLARE_COMPLETION(my_comp);
@@ -78,33 +78,33 @@ linux 就绪队列struct runqueue，每个CPU都有一个执行队列，队列�
 ---
 ### notify 机制， 模块之间通信
 ---
-    struct notifier_block
-    {
-        int (*notifier_call)(struct notifier_block *self, unsigned long, void *);
-        struct notifier_block *next;
-        int priority;
-    };
-    notifier_chain_register
-    notifier_call_chain
+struct notifier_block
+{
+    int (*notifier_call)(struct notifier_block *self, unsigned long, void *);
+    struct notifier_block *next;
+    int priority;
+};
+notifier_chain_register
+notifier_call_chain
 
 ---
 ### devicefs
 ---
-    DEVICE_ATTR  需要绑定设备
-    struct device_attribute {
-        struct attribute    attr;
-        ssize_t (*show)(struct device *dev, struct device_attribute *attr,char *buf);
-        ssize_t (*store)(struct device *dev, struct device_attribute *attr,const char *buf, size_t count);
-    };
-    DEVICE_ATTR  实现一些这样的设备属性结构
-    sysfs_create_file(&mydevice->kobj, &dev_attr_mydevice.attr);  绑定设备与设备属性
+DEVICE_ATTR  需要绑定设备
+struct device_attribute {
+    struct attribute    attr;
+    ssize_t (*show)(struct device *dev, struct device_attribute *attr,char *buf);
+    ssize_t (*store)(struct device *dev, struct device_attribute *attr,const char *buf, size_t count);
+};
+DEVICE_ATTR  实现一些这样的设备属性结构
+sysfs_create_file(&mydevice->kobj, &dev_attr_mydevice.attr);  绑定设备与设备属性
 
 ---
 ### debugfs 
 ---
-    无需绑定设备，mount debugfs 之后就可以在该目录下找到我们的节点
-    debugfs_create_dir(const char *name, struct dentry *parent); 
-    debugfs_create_file("stats", S_IRUGO | S_IWUSR, client->debugfs,client, &debugfs_stats_ops);  绑定文件和函数操作集合
+无需绑定设备，mount debugfs 之后就可以在该目录下找到我们的节点
+debugfs_create_dir(const char *name, struct dentry *parent); 
+debugfs_create_file("stats", S_IRUGO | S_IWUSR, client->debugfs,client, &debugfs_stats_ops);  绑定文件和函数操作集合
 
 ---
 ### Cmake mafile工程的构建工具
@@ -118,10 +118,10 @@ linux 就绪队列struct runqueue，每个CPU都有一个执行队列，队列�
 ---
 ### makefile
 ---
-    $@  表示目标文件
-    $^  表示所有的依赖文件
-    $<  表示第一个依赖文件
-    $?  表示比目标还要新的依赖文件列表
+$@  表示目标文件
+$^  表示所有的依赖文件
+$<  表示第一个依赖文件
+$?  表示比目标还要新的依赖文件列表
 
 ---
 ### 原子操作
@@ -145,18 +145,18 @@ spinlock:
 ---
 ### 互斥锁mutex， 锁住线程共享资源
 ---
-    pthread_mutex_lock 无法获取该所示，进入阻塞（睡眠，这些睡眠的线程会排队访问互斥量），pthread_mutex_trylock 就不会阻塞，直接返回ebusy
+pthread_mutex_lock 无法获取该所示，进入阻塞（睡眠，这些睡眠的线程会排队访问互斥量），pthread_mutex_trylock 就不会阻塞，直接返回ebusy
 
 ---
 ### 读写锁rwlock
 ---
-    pthread_rwlock_rdlock(pthread_rwlock_t *rwpt);
-    pthread_rwlock_wrlock(pthread_rwlock_t *rwpt);
-    pthread_rwlock_unlock(pthread_rwlock_t *rwpt);
+pthread_rwlock_rdlock(pthread_rwlock_t *rwpt);
+pthread_rwlock_wrlock(pthread_rwlock_t *rwpt);
+pthread_rwlock_unlock(pthread_rwlock_t *rwpt);
 ---
 ### 死锁的例子
 ---
-    2个线程持有2把锁，交叉互锁，出现死锁。
+2个线程持有2把锁，交叉互锁，出现死锁。
 
 ---
 ### 进程空间
@@ -205,8 +205,8 @@ userspace 空间分区
 ---
 ### 物理内存，虚拟内存如何组织映射。
 ---
-    虚拟地址空间比可用的物理内存大很多，因此只有最常用的部分才与物理页帧关联
-    这不是问题，因为大多数程序只占用实际可用内存的一小部分
+虚拟地址空间比可用的物理内存大很多，因此只有最常用的部分才与物理页帧关联
+这不是问题，因为大多数程序只占用实际可用内存的一小部分
 
 ---
 ### 野指针
@@ -228,16 +228,16 @@ userspace 空间分区
 ---
 ### 排序算法有哪些
 ---
-    冒泡排序
-    选择排序
-    插入排序
-    希尔排序
-    归并排序
-        迭代法
-        递归法
-    快速排序
-        迭代法
-        递归法
+冒泡排序
+选择排序
+插入排序
+希尔排序
+归并排序
+    迭代法
+    递归法
+快速排序
+    迭代法
+    递归法
  
 ---
 ### c 函数型参处于那个内存空间
@@ -281,9 +281,9 @@ NZCV<br>[27:8] 保留
 ---
 ### 物理/虚拟地址映射
 ---
-	32位linux总地址4G 一级页表页大小4K, 共4G/4k个页， 
-    每1M个页组成1个页目录，1M个页目录是一个固定入口地址， 存在CR3 中。
-    二级页表存储1M页目录 页目录地址-> CR3寄存器 
+32位linux总地址4G 一级页表页大小4K, 共4G/4k个页， 
+每1M个页组成1个页目录，1M个页目录是一个固定入口地址， 存在CR3 中。
+二级页表存储1M页目录 页目录地址-> CR3寄存器 
 一个虚拟地址的组成：
     DIRECTORY [22：31] 可表示1024个页目录（PGD）
     TABLE[12：21] 可表示1024个页表（PTE)
@@ -292,17 +292,17 @@ NZCV<br>[27:8] 保留
 ---
 ### copy_to_user/copy_form_user 
 ---
-    虚拟内存地址对应的物理内存与内核虚拟内存地址对应的物理内存
+虚拟内存地址对应的物理内存与内核虚拟内存地址对应的物理内存
 
 ---
 ### mmap
 ---
-    用户空间虚拟地址与物理地址的map 目标是在用户空间访问硬件，所有可以省去映射到kernel虚拟空间这一步。
+用户空间虚拟地址与物理地址的map 目标是在用户空间访问硬件，所有可以省去映射到kernel虚拟空间这一步。
 
 ---
 ### ioremap
 ---
-    内核空间虚拟地址与物理地址的map
+内核空间虚拟地址与物理地址的map
 
 --- 
 ### IPC 机制
@@ -336,9 +336,9 @@ hexgon SDK running time logger , fastRPC
 ---
 ### 屏幕基本
 ---
-    一个像素8bit RGB 
-    信号发生时间	
-        vsync 到一帧的最后一个像素 -> 发出VBP(帧后的同步时间) -> hsync 行同步信号 -> HBP行后同步时间 -> 一行像素 -> HFP行前同步信号 -> VFP帧前同步信号
+一个像素8bit RGB 
+信号发生时间	
+    vsync 到一帧的最后一个像素 -> 发出VBP(帧后的同步时间) -> hsync 行同步信号 -> HBP行后同步时间 -> 一行像素 -> HFP行前同步信号 -> VFP帧前同步信号
 
 
 ---
@@ -419,10 +419,10 @@ hexgon SDK running time logger , fastRPC
 ---
 ### M7 i2c
 ---
-    发出从地址后，没有ack
-        从地址不对？ 轮寻一定范围的地址，查看是否有ack.
-    M7的时钟 200/300/400M
-    i2c 低中高时钟 100K/
+发出从地址后，没有ack
+    从地址不对？ 轮寻一定范围的地址，查看是否有ack.
+M7的时钟 200/300/400M
+i2c 低中高时钟 100K/
 
 
 ---
@@ -432,4 +432,4 @@ hexgon SDK running time logger , fastRPC
 ---
 ### sn3193 类似芯片
 ---
-    关键参数流程
+关键参数流程
