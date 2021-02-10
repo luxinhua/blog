@@ -1,6 +1,6 @@
 ---
 title: vim base operation
-date: 2021/1/10
+date: 2021/2/10
 categories:
 - vim
 ---
