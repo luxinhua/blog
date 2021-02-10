@@ -40,7 +40,7 @@ jobs:
           npm install hexo-generator-feed --save --registry https://registry.npm.taobao.org
           npm install hexo-generator-sitemap --save --registry https://registry.npm.taobao.org
           npm install hexo-generator-baidu-sitemap --save --registry https://registry.npm.taobao.org
-          npm install hexo-tag-dplayer --save --registry https://registry.npm.taobao.org
+          # npm install hexo-tag-dplayer --save --registry https://registry.npm.taobao.org
 
           npm install
           hexo clean
