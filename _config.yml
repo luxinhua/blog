@@ -110,6 +110,6 @@ deploy:
   branch: master
   # token: '' 
   message: update article
-  name: xhlu
+  name: Lucifer
   email: 2846154596@qq.com
   extend_dirs: public/
