@@ -42,6 +42,7 @@ HelloWorldEntry(
 
 同级目录下添加构建文件 ：OvmfPkg\HelloWorld\HelloWorld.inf
 ~~~bash
+[Defines]  
   INF_VERSION = 0x00010007 
   BASE_NAME = HelloWorld
   FILE_GUID = 69A6DE6D-FA9F-485E-9A4E-EA70FDCFD82F
