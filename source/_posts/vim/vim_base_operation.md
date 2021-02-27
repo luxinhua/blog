@@ -458,3 +458,59 @@ autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.gra
 [26]: https://github.com/mxw/vim-jsx
 [27]: https://github.com/prettier/vim-prettier
 [28]: https://github.com/FengShangWuQi/to-vim/blob/master/.vimrc
+
+
+---
+### My vimrc config  
+---
+~~~bash
+set nu
+set ts=2
+set hlsearch 
+set et
+set expandtab
+
+noremap <A-up> :call feedkeys( line('.')==1 ? '' : 'ddkP' )<CR>
+noremap <A-down> ddp
+
+" tags 设置
+set tags=tags;
+    set autochdir
+
+if has("cscope")
+    set csprg=/usr/bin/cscope
+    "指定用来执行 cscope 的命令
+    set csto=1
+    "先搜索tags标签文件,再搜索cscope数据库
+    set cst
+    "使用|:cstag|(:cs find g),而不是缺省的:tag
+    set nocsverb
+    "不显示添加数据库是否成功
+    " add any database in current directory
+    if filereadable("cscope.out")
+        cs add cscope.out
+    "添加cscope数据库
+    endif
+    "显示添加成功与否
+    set csverb
+endif
+
+:set cscopequickfix=s-,c-,d-,i-,t-,e-
+
+nmap <C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+nmap <C-\>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+nmap <C-\>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+nmap <C-\>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+nmap <C-\>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+nmap <C-\>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+nmap <C-\>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>
+
+" quick exit 
+nmap <ESC> :wq
+
+syntax on
+
+set nocp
+
+~~~
