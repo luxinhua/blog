@@ -61,6 +61,9 @@ $ git config --global credential.helper store
 
 # 配置忽略文件权限的改变
 $ git config --global core.filemode false
+
+# windows 上忽略回车符差异
+$ git config --global core.whitespace cr-at-eol
 ~~~
 
 ---
