@@ -52,6 +52,9 @@ $ git config --global color.ui true
 # 配置可以缓存密码，默认缓存时间15分钟
 $ git config --global credential.helper cache
 
+# git 输入一次密码后永久记住
+$ git config --global credential.helper store
+
 # 配置密码的缓存时间
 # 缓存时间单位：秒
 $ git config --global credential.helper 'cache --timeout=<缓存时间>'
@@ -64,6 +67,7 @@ $ git config --global core.filemode false
 
 # windows 上忽略回车符差异
 $ git config --global core.whitespace cr-at-eol
+
 ~~~
 
 ---
