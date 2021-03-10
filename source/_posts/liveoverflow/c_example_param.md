@@ -4,11 +4,11 @@ date: 2021/3/8
 categories: liveoverflow
 ---
 
+---
+### 测试源码
+---
 ~~~bash
-xinhualu@BU-build-XHLU /cygdrive/c/Users/xinhualu/Desktop/pri_xx/test
-$ cat main.c
 #include <stdio.h>
-
 
 int test2(int a, int b , int c, int d , int e){
   printf("%d, %d, %d, %d, %d\n", a,b,c,d,e);
@@ -25,10 +25,13 @@ int main(int argc,char *argv[]){
     test(1,2,3,4,5);
     return 0;
 }
+~~~
 
-xinhualu@BU-build-XHLU /cygdrive/c/Users/xinhualu/Desktop/pri_xx/test
-$ vim main.c
 
+---
+### 调试过程
+---
+~~~bash
 xinhualu@BU-build-XHLU /cygdrive/c/Users/xinhualu/Desktop/pri_xx/test
 $ gdb a.exe
 GNU gdb (GDB) (Cygwin 9.2-1) 9.2
@@ -93,14 +96,14 @@ test (a=1, b=2, c=3, d=4, e=5) at main.c:10
 14
 (gdb) disassemble
 Dump of assembler code for function test:
-   0x00000001004010ca <+0>:     push   %rbp
+   0x00000001004010ca <+0>:     push   %rbp              <font color='red'> 将被调函数的main栈帧栈底地址放入bp寄存器中,此时我们看到的就是函数test的栈帧 </font>
    0x00000001004010cb <+1>:     mov    %rsp,%rbp
    0x00000001004010ce <+4>:     sub    $0x30,%rsp
-   0x00000001004010d2 <+8>:     mov    %ecx,0x10(%rbp)
+   0x00000001004010d2 <+8>:     mov    %ecx,0x10(%rbp)   <font color='red'> 将一会要用到的core寄存器压栈 ， ？为什么不把函数参数直接压栈呢，非要用core寄存器 ？ </font>
    0x00000001004010d5 <+11>:    mov    %edx,0x18(%rbp)
    0x00000001004010d8 <+14>:    mov    %r8d,0x20(%rbp)
    0x00000001004010dc <+18>:    mov    %r9d,0x28(%rbp)
-=> 0x00000001004010e0 <+22>:    movl   $0xa,0x20(%rsp)
+=> 0x00000001004010e0 <+22>:    movl   $0xa,0x20(%rsp)   <font color='red'> 如下6/7/8/9参数被放到了 core 寄存器中，0xa 被压入栈中 </font>
    0x00000001004010e8 <+30>:    mov    $0x9,%r9d
    0x00000001004010ee <+36>:    mov    $0x8,%r8d
    0x00000001004010f4 <+42>:    mov    $0x7,%edx
