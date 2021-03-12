@@ -2,7 +2,7 @@
 title: vscode 插件记录
 date: 2021/3/11
 categories:
-- Yolo
+- Project_Yolo
 ---
 
 ### 环境搭建
