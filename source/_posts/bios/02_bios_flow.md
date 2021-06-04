@@ -10,5 +10,5 @@ toc: true # 是否启用内容索引
 ### reference file list 
 ---
 {% asset_link ATBB-Memory_Protection_in_UEFI_BIOS.pdf %} 
-
+![](ATBB-Memory_Protection_in_UEFI_BIOS.pdf)
 
