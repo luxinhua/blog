@@ -47,3 +47,10 @@ target_link_libraries(CalculateSqrt PUBLIC MathFunctions)
 # 使用特定的源码为项目增加lib 
 add_library(MathFunctions mysqrt.cpp) 
 
+---
+### 安装测试
+---
+添加在CMakeList.txt
+就是决定执行make install 的时候，拷贝哪些文件到lib/bin/include
+install(TARGETS MathFunctions DESTINATION lib) 
+install(FILES MathFunctions.h DESTINATION include) 
