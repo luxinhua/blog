@@ -7,6 +7,11 @@ toc: true # 是否启用内容索引
 # sidebar: none # 是否启用sidebar侧边栏，none：不启用
 
 ---
+### BIOS Training Flow
+---
+[REFERENCE](https://github.com/tianocore-training/Tianocore_Training_Contents/wiki/Catalog_of_Training) link.
+
+---
 ### reference file list 
 ---
 {% asset_link edk2-DecSpecification.pdf %}  <br>
