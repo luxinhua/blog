@@ -186,7 +186,7 @@ profile:
   enabled: true # Whether to show profile bar
   avatar: images/cat.jpeg # avatar.jpg
   gravatar: # Gravatar email address, if you enable Gravatar, your avatar config will be overriden
-  author: StarLoad
+  author: StarLord
   author_title: 嵌入式开发
   author_description: 个人简介。
   location: Shanghai, China
