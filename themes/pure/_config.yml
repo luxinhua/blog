@@ -102,7 +102,7 @@ share:
 
 # Github
 github: 
-  username: xhlu  # github username
+  username: StarLoad # github username
 
 # Comment
 # Gitment
@@ -186,7 +186,7 @@ profile:
   enabled: true # Whether to show profile bar
   avatar: images/cat.jpeg # avatar.jpg
   gravatar: # Gravatar email address, if you enable Gravatar, your avatar config will be overriden
-  author: xhlu
+  author: StarLoad
   author_title: 嵌入式开发
   author_description: 个人简介。
   location: Shanghai, China
