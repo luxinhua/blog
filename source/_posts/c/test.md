@@ -1,7 +1,8 @@
 ---
-title: 自己实现动态内存分配思路（有点伪）
+title: test 
 date: 2021/6/8
 categories: c
+toc: true
 ---
 
 
