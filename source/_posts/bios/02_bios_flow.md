@@ -14,6 +14,7 @@ toc: true # 是否启用内容索引
 ---
 ### reference file list 
 ---
+{% asset_link PI_Spec_1_7_A_final_May1.pdf %}  <br>
 {% asset_link edk2-DecSpecification.pdf %}  <br>
 {% asset_link edk2-DscSpecification.pdf %}  <br>
 {% asset_link edk2-FdfSpecification.pdf %}   <br>
