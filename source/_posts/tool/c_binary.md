@@ -35,15 +35,15 @@ toc: true # 是否启用内容索引
 ---
 ### 2进制转16进制 
 ---
-
 1.  vim 中 ：%！xxd   退回二进制： ：%！xxd  -r 
 2.  bash shell: xxd a.out > 16.txt
 
 ---
 ### file 
 ---
-
 ~~~bash 
+$ file helloworld.riscv
+helloworld.riscv: ELF 64-bit LSB executable, UCB RISC-V, version 1 (SYSV), statically linked, with debug_info, not stripped
 ~~~
 
 ---
@@ -58,9 +58,12 @@ readelf -S a.out   #  -S(section headers),sections
 ---
 ### addr2line
 ---
-
-~~~bash 
-~~~
+[用法](https://www.jianshu.com/p/c2e2b8f8ea0d)
 
 
-
+---
+### ELF 操作库ELFIO
+---
+只需要 include  elfio/elfio.hpp
+[doc](https://gitee.com/mirrors/elfio/tree/master/doc)
+[gitee](https://gitee.com/mirrors/elfio)
