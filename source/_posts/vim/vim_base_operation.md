@@ -6,7 +6,7 @@ categories:
 ---
 
 ---
-### 安装
+### 安装  [neovim+coc.vim plug](https://www.cnblogs.com/cniwoq/p/13272746.html)
 ---
 ~~~bash
 sudo apt-getinstall vim// Ubuntu
