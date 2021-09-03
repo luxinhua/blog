@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/cygdrive/c/Users/xinhualu/Desktop/pri_xx/cpudir/simulator_print/output",
+  "command": "/usr/bin/cc  -I/cygdrive/c/Users/xinhualu/Desktop/pri_xx/cpudir/simulator_print/inc -I/cygdrive/c/Users/xinhualu/Desktop/pri_xx/cpudir/simulator_print/library/easylogger/inc  -o CMakeFiles/myprint.dir/src/main.c.o -c /cygdrive/c/Users/xinhualu/Desktop/pri_xx/cpudir/simulator_print/src/main.c",
+  "file": "/cygdrive/c/Users/xinhualu/Desktop/pri_xx/cpudir/simulator_print/src/main.c"
+},
+{
+  "directory": "/cygdrive/c/Users/xinhualu/Desktop/pri_xx/cpudir/simulator_print/output",
+  "command": "/usr/bin/cc  -I/cygdrive/c/Users/xinhualu/Desktop/pri_xx/cpudir/simulator_print/inc -I/cygdrive/c/Users/xinhualu/Desktop/pri_xx/cpudir/simulator_print/library/easylogger/inc  -o CMakeFiles/myprint.dir/src/myprintf.c.o -c /cygdrive/c/Users/xinhualu/Desktop/pri_xx/cpudir/simulator_print/src/myprintf.c",
+  "file": "/cygdrive/c/Users/xinhualu/Desktop/pri_xx/cpudir/simulator_print/src/myprintf.c"
+}
+]

@@ -1,0 +1,3 @@
+/cygdrive/c/Users/xinhualu/Desktop/pri_xx/cpudir/simulator_print/output/CMakeFiles/edit_cache.dir
+/cygdrive/c/Users/xinhualu/Desktop/pri_xx/cpudir/simulator_print/output/CMakeFiles/rebuild_cache.dir
+/cygdrive/c/Users/xinhualu/Desktop/pri_xx/cpudir/simulator_print/output/CMakeFiles/myprint.dir

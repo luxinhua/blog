@@ -1,0 +1,1 @@
+/usr/bin/cc -Wl,--enable-auto-import CMakeFiles/myprint.dir/src/main.c.o CMakeFiles/myprint.dir/src/myprintf.c.o -o myprint.exe -Wl,--out-implib,libmyprint.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
