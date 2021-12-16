@@ -39,16 +39,18 @@ categories: linux
 ---
 ### install kernel
 ---
-    finish compile ，there will be 2 deb package in path "../"
+finish compile ，there will be 2 deb package in path "../"
    	
-        linux-headers-5.11.19amd336_5.11.19amd336-10.00.Custom_amd64.deb
-        linux-image-5.11.19amd336_5.11.19amd336-10.00.Custom_amd64.deb
+    linux-headers-5.11.19amd336_5.11.19amd336-10.00.Custom_amd64.deb
+    linux-image-5.11.19amd336_5.11.19amd336-10.00.Custom_amd64.deb
    
     sudo dpkg -i linux-*.deb 
     sudo reboot 
-    choose your kernel to boot 
-    Edit /etc/default/grub ,  
-		comment GRUB_TIMEOUT_STYLE=hidden
+
+choose your kernel to boot 
+Edit /etc/default/grub ,  
+	
+        comment GRUB_TIMEOUT_STYLE=hidden
 		change GRUB_TIMEOUT to "GRUB_TIMEOUT=10", 
 		update-grub.  
     
